@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-class AnimationContainer extends React.Component {
+class AnimationContainer extends Component {
     constructor(props) {
         super()
 
@@ -13,7 +13,7 @@ class AnimationContainer extends React.Component {
         this.onSlideChangeEnd = this.onSlideChangeEnd.bind(this);
     }
 
-    findSections() {
+    findSections = () => {
         const node = ReactDOM.findDOMNode(this);
         if (node instanceof HTMLElement) {
             const sectionsArray = [].slice.call(node.getElementsByTagName("section"));
@@ -32,19 +32,19 @@ class AnimationContainer extends React.Component {
         event.preventDefault();
     }
 
-    goToPrevSlide() {
+    goToPrevSlide = () => {
         const previousIdx = this.props.activeSection - 1;
         if (previousIdx > -1 && !this.state.isAnimating) 
             this.goToSlide("prev", previousIdx, this.onSlideChangeEnd);
     }
 
-    goToNextSlide() {
+    goToNextSlide = () => {
         const nextIndex = this.props.activeSection + 1;
         if (nextIndex < this.state.sections.length && !this.state.isAnimating) 
             this.goToSlide("next", nextIndex, this.onSlideChangeEnd);
     }
 
-    goToSlide(dir, slideIdx, callback) {
+    goToSlide = (dir, slideIdx, callback) => {
         this.setState({ isAnimating: true });
         this.props.updateSection(slideIdx);
 
@@ -61,7 +61,7 @@ class AnimationContainer extends React.Component {
         callback();
     }
 
-    onSlideChangeEnd() {
+    onSlideChangeEnd = () => {
         const _this = this;
         setTimeout(()=> { _this.setState({ isAnimating: false }) }, 750); // add pause to prevent skipping slides
 
