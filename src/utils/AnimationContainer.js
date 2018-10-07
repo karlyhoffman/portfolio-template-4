@@ -34,12 +34,14 @@ class AnimationContainer extends React.Component {
 
     goToPrevSlide() {
         const previousIdx = this.props.activeSection - 1;
-        if (previousIdx > -1 && !this.state.isAnimating) this.goToSlide("prev", previousIdx, this.onSlideChangeEnd);
+        if (previousIdx > -1 && !this.state.isAnimating) 
+            this.goToSlide("prev", previousIdx, this.onSlideChangeEnd);
     }
 
     goToNextSlide() {
         const nextIndex = this.props.activeSection + 1;
-        if (nextIndex < this.state.sections.length && !this.state.isAnimating) this.goToSlide("next", nextIndex, this.onSlideChangeEnd);
+        if (nextIndex < this.state.sections.length && !this.state.isAnimating) 
+            this.goToSlide("next", nextIndex, this.onSlideChangeEnd);
     }
 
     goToSlide(dir, slideIdx, callback) {

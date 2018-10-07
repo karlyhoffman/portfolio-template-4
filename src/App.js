@@ -27,16 +27,24 @@ class App extends Component {
                 activeSection={section}
                 updateSection={this.handleSectionUpdate}>
 
-                    <section className="portfolio-template-4 animate">
+                    <section className="animate">
                         <h1>Hello, New Portfolio.</h1>
                     </section>
 
-                    <section className="section-1">
+                    <section>
                         <h1>Section 1</h1>
                     </section>
 
-                    <section className="section-2">
+                    <section>
                         <h1>Section 2</h1>
+                    </section>
+
+                    <section>
+                        <h1>Section 3</h1>
+                    </section>
+
+                    <section>
+                        <h1>Section 4</h1>
                     </section>
             </AnimationContainer>
         )
