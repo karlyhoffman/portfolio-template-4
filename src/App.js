@@ -6,6 +6,7 @@ import IntroSection from './components/IntroSection';
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectSection from "./components/ProjectSection";
+import ContactSection from "./components/ContactSection"
 
 import mcdImg from "./assets/images/mcd.png"
 import natgeoImg from "./assets/images/natgeo.png"
@@ -82,9 +83,8 @@ class App extends Component {
                         />
                     ))}
 
-                    <section>
-                        <h2>Contact</h2>
-                    </section>
+                    <ContactSection />
+
             </AnimationContainer>
         )
     }

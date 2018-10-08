@@ -1,0 +1,15 @@
+#contact {
+
+    h2 {
+        background-color: $carrot;
+        color: $off-white;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            padding: 0 10px;
+        }
+    }
+}
