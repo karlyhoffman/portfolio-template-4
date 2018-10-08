@@ -1,0 +1,17 @@
+#skills {
+
+    h2 {
+        background-color: $java;
+        color: $off-white;
+    }
+
+    .skills-container {
+        display: flex;
+
+        h3 {
+            display: inline;
+            background-color: $off-black;
+            color: $off-white;
+        }
+    }
+}

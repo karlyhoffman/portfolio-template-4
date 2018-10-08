@@ -13,7 +13,7 @@ const IntroSection = () => {
 
             <div className="subhead">
                 <div className="detail">{bgLines}</div>
-                <p className="subhead">Chicago based Front End Developer.</p>
+                <p>Chicago based Front End Developer.</p>
             </div>
         </section>
     )

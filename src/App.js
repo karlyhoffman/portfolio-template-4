@@ -3,6 +3,8 @@ import "./assets/styles/main.scss";
 
 import AnimationContainer from './utils/AnimationContainer';
 import IntroSection from './components/IntroSection'
+import AboutSection from "./components/AboutSection";
+import SkillsSection from "./components/SkillsSection";
 
 class App extends Component {
     constructor(props) {
@@ -29,26 +31,11 @@ class App extends Component {
                 activeSection={section}
                 updateSection={this.handleSectionUpdate}>
 
-                    <IntroSection/>
+                    <IntroSection />
 
-                    <section>
-                        <h2>Web editor turned web developer</h2>
-                        <p>Gained experience writing and organizing content for web pages, now brings that content to life through programming.</p>
-                        <p>Has an eye for detail and the ability to add functionality to any page or application.</p>
-                        <p>Knowledgeable, dependable, and versatile in the web industry.</p>
-                    </section>
+                    <AboutSection />
 
-                    <section>
-                        <h2>Expertise</h2>
-                        <ul>
-                            <li>UI Development</li>
-                            <li>JavaScript</li>
-                            <li>CSS/SCSS</li>
-                            <li>Animations</li>
-                            <li>Vue</li>
-                            <li>React</li>
-                        </ul>
-                    </section>
+                    <SkillsSection />
 
                     <section>
                         <h2>Notable Projects</h2>

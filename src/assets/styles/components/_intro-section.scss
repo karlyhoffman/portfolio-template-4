@@ -3,13 +3,13 @@
     h1 {
         background-color: #272727;
         color: #f0eee2;
-        padding: 0 5vw;
     }
 
     .subhead {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10vh;
 
         .detail {
             display: flex;
@@ -35,6 +35,10 @@
                      background-color: $carrot;
                 }
             }
+        }
+
+        p {
+            margin: auto;
         }
     }
 }
