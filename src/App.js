@@ -5,13 +5,52 @@ import AnimationContainer from './utils/AnimationContainer';
 import IntroSection from './components/IntroSection'
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
+import ProjectSection from "./components/ProjectSection";
 
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            section: 0
+            section: 0,
+            projects: [
+                {
+                    title: "McDonald's Visual Design Hub",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
+                    technologies: [
+                        "React",
+                        "GSAP",
+                        "WordPress"
+                    ]
+                },
+                {
+                    title: "National Geographic",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
+                    technologies: [
+                        "HTML",
+                        "CSS/SCSS",
+                        "GSAP"
+                    ]
+                },
+                {
+                    title: "Good Reason Houston",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
+                    technologies: [
+                        "CSS/SCSS",
+                        "Wordpress",
+                        "GSAP"
+                    ]
+                },
+                {
+                    title: "New Typo Graphics",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
+                    technologies: [
+                        "JavaScript",
+                        "Vue",
+                        "GSAP"
+                    ]
+                }
+            ]
         }
     }
 
@@ -24,12 +63,13 @@ class App extends Component {
     }
 
     render() {
-        const { section } = this.state;
+        const { section, projects } = this.state;
 
         return (
             <AnimationContainer
                 activeSection={section}
-                updateSection={this.handleSectionUpdate}>
+                updateSection={this.handleSectionUpdate}
+                >
 
                     <IntroSection />
 
@@ -37,61 +77,12 @@ class App extends Component {
 
                     <SkillsSection />
 
-                    <section>
-                        <h2>Notable Projects</h2>
-                        <div className="project-desc">
-                            <h3 className="title">McDonald's Visual Design Hub</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
-                            <p>Technologies Used</p>
-                            <ul>
-                                <li>React</li>
-                                <li>GSAP</li>
-                                <li>WordPress</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2>Notable Projects</h2>
-                        <div className="project-desc">
-                            <h3 className="title">National Geographic</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
-                            <p>Technologies Used</p>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS/SCSS</li>
-                                <li>GSAP</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2>Notable Projects</h2>
-                        <div className="project-desc">
-                            <h3 className="title">Good Reason Houston</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
-                            <p>Technologies Used</p>
-                            <ul>
-                                <li>CSS/SCSS</li>
-                                <li>Wordpress</li>
-                                <li>GSAP</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2>Notable Projects</h2>
-                        <div className="project-desc">
-                            <h3 className="title">New Typo Graphics</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
-                            <p>Technologies Used</p>
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>Vue</li>
-                                <li>GSAP</li>
-                            </ul>
-                        </div>
-                    </section>
+                    {projects.map((project, idx) => (
+                        <ProjectSection 
+                            {...project}
+                            key={idx}
+                        />
+                    ))}
 
                     <section>
                         <h2>Contact</h2>
