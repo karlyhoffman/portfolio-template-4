@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./assets/styles/main.scss";
+
 import AnimationContainer from './utils/AnimationContainer';
+import IntroSection from './components/IntroSection'
 
 class App extends Component {
     constructor(props) {
@@ -27,10 +29,7 @@ class App extends Component {
                 activeSection={section}
                 updateSection={this.handleSectionUpdate}>
 
-                    <section className="animate">
-                        <h1>Karly Hoffman</h1>
-                        <p className="subhead">Chicago based Front End Developer.</p>
-                    </section>
+                    <IntroSection/>
 
                     <section>
                         <h2>Web editor turned web developer</h2>
@@ -72,9 +71,9 @@ class App extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
                             <p>Technologies Used</p>
                             <ul>
-                                <li>React</li>
+                                <li>HTML</li>
+                                <li>CSS/SCSS</li>
                                 <li>GSAP</li>
-                                <li>WordPress</li>
                             </ul>
                         </div>
                     </section>
@@ -86,6 +85,7 @@ class App extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
                             <p>Technologies Used</p>
                             <ul>
+                                <li>CSS/SCSS</li>
                                 <li>Wordpress</li>
                                 <li>GSAP</li>
                             </ul>
@@ -99,6 +99,7 @@ class App extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.</p>
                             <p>Technologies Used</p>
                             <ul>
+                                <li>JavaScript</li>
                                 <li>Vue</li>
                                 <li>GSAP</li>
                             </ul>
