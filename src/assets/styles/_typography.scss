@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Apercu-Bold';
+  src: url('../fonts/Apercu/Apercu-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Apercu/Apercu-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Apercu/Apercu-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Apercu/Apercu-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Apercu/Apercu-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Apercu-Medium';
+  src: url('../fonts/Apercu/Apercu-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Apercu/Apercu-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Apercu/Apercu-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Apercu/Apercu-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Apercu/Apercu-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Apercu-Regular';
+  src: url('../fonts/Apercu/Apercu-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Apercu/Apercu-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Apercu/Apercu-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Apercu/Apercu-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Apercu/Apercu-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Apercu-Light';
+  src: url('../fonts/Apercu/Apercu-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Apercu/Apercu-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Apercu/Apercu-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Apercu/Apercu-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Apercu/Apercu-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+$apercu-bold: 'Apercu-Bold', sans-serif;
+$apercu-medium: 'Apercu-Medium', sans-serif;
+$apercu: 'Apercu-Regular', sans-serif;
+$apercu-light: 'Apercu-Light', sans-serif;
