@@ -1,7 +1,29 @@
 .project {
+    position: relative;
 
     h2 {
         background-color: $sunglow;
         color: $off-white;
+        margin-left: 2vw;
+    }
+
+    h3.title,
+    h4 {
+        display: inline;
+        background-color: $off-black;
+        color: $off-white;
+    }
+
+    .img-container {
+        position: absolute;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 50vw;
+        height: 27vw;
+        top: 5vw;
+        right: 5vw;
+        z-index: -1;
     }
 }

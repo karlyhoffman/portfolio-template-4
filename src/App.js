@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import "./assets/styles/main.scss";
 
 import AnimationContainer from './utils/AnimationContainer';
-import IntroSection from './components/IntroSection'
+import IntroSection from './components/IntroSection';
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectSection from "./components/ProjectSection";
+
+import mcdImg from "./assets/images/mcd.png"
+import natgeoImg from "./assets/images/natgeo.png"
+import goodReasonImg from "./assets/images/good-reason.png"
 
 class App extends Component {
     constructor(props) {
@@ -19,18 +23,20 @@ class App extends Component {
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
                     technologies: [
                         "React",
-                        "GSAP",
-                        "WordPress"
-                    ]
+                        "WordPress",
+                        "GSAP"
+                    ],
+                    image: mcdImg
                 },
                 {
-                    title: "National Geographic",
+                    title: "National Geographic | Hennessey",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
                     technologies: [
-                        "HTML",
+                        "Vue",
                         "CSS/SCSS",
                         "GSAP"
-                    ]
+                    ],
+                    image: natgeoImg
                 },
                 {
                     title: "Good Reason Houston",
@@ -39,16 +45,8 @@ class App extends Component {
                         "CSS/SCSS",
                         "Wordpress",
                         "GSAP"
-                    ]
-                },
-                {
-                    title: "New Typo Graphics",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere a nisi sed mattis. Suspendisse potenti. Duis et consectetur purus. Phasellus cursus rutrum ex vitae lacinia.",
-                    technologies: [
-                        "JavaScript",
-                        "Vue",
-                        "GSAP"
-                    ]
+                    ],
+                    image: goodReasonImg
                 }
             ]
         }
