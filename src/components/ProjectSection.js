@@ -4,7 +4,7 @@ const ProjectSection = ({ title, description, technologies, image }) => {
 
     return (
         <section className="project">
-            <h2>Notable Projects</h2>
+            <h2>Work</h2>
             <div className="project-desc">
                 <h3 className="title">{ title }</h3>
                 <p>{ description }</p>

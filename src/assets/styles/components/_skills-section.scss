@@ -8,10 +8,14 @@
     .skills-container {
         display: flex;
 
-        h3 {
-            display: inline;
-            background-color: $off-black;
-            color: $off-white;
+        .list {
+            padding: 0 1vw;
+
+            h3 {
+                display: inline;
+                background-color: $off-black;
+                color: $off-white;
+            }
         }
     }
 }

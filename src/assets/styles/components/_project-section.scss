@@ -1,5 +1,6 @@
 .project {
     position: relative;
+    padding-top: 20vh;
 
     h2 {
         background-color: $sunglow;
@@ -7,11 +8,14 @@
         margin-left: 2vw;
     }
 
-    h3.title,
-    h4 {
-        display: inline;
-        background-color: $off-black;
-        color: $off-white;
+    .project-desc {
+
+        h3.title,
+        h4 {
+            display: inline;
+            background-color: $off-black;
+            color: $off-white;
+        }
     }
 
     .img-container {
@@ -20,8 +24,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
-        width: 50vw;
-        height: 27vw;
+        width: 70vw;
+        height: 38vw;
         top: 5vw;
         right: 5vw;
         z-index: -1;
