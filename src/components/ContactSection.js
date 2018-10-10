@@ -1,10 +1,11 @@
 import React from 'react';
+import SplitString from "../utils/SplitString";
 
 const ContactSection = () => {
 
     return (
         <section id="contact">
-            <h2>Contact</h2>
+            <SplitString elementTag="h2">Contact</SplitString>
             <ul>
                 <li>Email</li>
                 <li>Github</li>

@@ -1,10 +1,11 @@
 import React from 'react';
+import SplitString from "../utils/SplitString";
 
 const AboutSection = () => {
 
     return (
         <section id="about">
-            <h2>Web editor turned web developer</h2>
+            <SplitString elementTag="h2">Web editor turned web developer</SplitString>
             
             <div className="copy-container">
                 <p>Gained <strong>experience writing and organizing content</strong> for web pages, now brings that content to life through programming.</p>

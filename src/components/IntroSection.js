@@ -1,4 +1,5 @@
 import React from 'react';
+import SplitString from "../utils/SplitString";
 
 const IntroSection = () => {
 
@@ -9,11 +10,11 @@ const IntroSection = () => {
 
     return (
         <section id="intro" className="animate">
-            <h1>Karly Hoffman</h1>
+            <SplitString elementTag="h1">Karly Hoffman</SplitString>
 
             <div className="subhead">
                 <div className="detail">{bgLines}</div>
-                <p>Chicago based Front End Developer.</p>
+                <p>Chicago-based Front End Developer.</p>
             </div>
         </section>
     )

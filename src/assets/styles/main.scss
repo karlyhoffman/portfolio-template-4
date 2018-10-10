@@ -4,6 +4,7 @@
 @import './_reset';
 @import './_typography';
 @import './_variables';
+@import './_animations';
 @import './components/intro-section';
 @import './components/about-section';
 @import './components/skills-section';
@@ -19,7 +20,6 @@ body {
 	color: $off-black;
 	font-family: $apercu-light;
 	font-size: 18px;
-	line-height: 1.3;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;

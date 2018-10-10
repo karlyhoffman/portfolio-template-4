@@ -1,8 +1,11 @@
 #intro {
     
-    h1 {
-        background-color: #272727;
+    h1.highlight {
         color: #f0eee2;
+
+        &::before {
+            background-color: #272727;
+        }
     }
 
     .subhead {

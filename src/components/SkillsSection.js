@@ -1,10 +1,11 @@
 import React from 'react';
+import SplitString from "../utils/SplitString";
 
 const SkillsSection = () => {
 
     return (
         <section id="skills">
-            <h2>Expertise</h2>
+            <SplitString elementTag="h2">Expertise</SplitString>
             
             <div className="skills-container">
                 <div className="list">

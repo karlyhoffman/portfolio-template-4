@@ -1,4 +1,5 @@
 import React from 'react';
+import SplitString from "../utils/SplitString";
 
 const ProjectSection = ({ title, description, technologies, image }) => {
 
@@ -6,7 +7,11 @@ const ProjectSection = ({ title, description, technologies, image }) => {
         <section className="project">
             <h2>Work</h2>
             <div className="project-desc">
-                <h3 className="title">{ title }</h3>
+                <SplitString 
+                    elementTag="h3"
+                    className="title">
+                        { title }
+                </SplitString>
                 <p>{ description }</p>
                 <h4>Technologies Used:</h4>
                 <ul>
