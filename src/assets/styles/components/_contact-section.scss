@@ -1,8 +1,11 @@
 #contact {
 
-    h2 {
-        background-color: $carrot;
+    h2.highlight {
         color: $off-white;
+
+        &::before {
+            background-color: $carrot;
+        }
     }
 
     ul {

@@ -1,20 +1,35 @@
 #skills {
 
-    h2 {
-        background-color: $java;
+    h2.highlight {
         color: $off-white;
+
+        &::before {
+            background-color: $java;
+        }
     }
 
     .skills-container {
         display: flex;
+        justify-content: center;
+        width: 55vw;
 
         .list {
+            flex-grow: 1;
+            flex-basis: 0;
+            text-align: center;
             padding: 0 1vw;
 
             h3 {
-                display: inline;
                 background-color: $off-black;
                 color: $off-white;
+            }
+
+            ul {
+                margin-top: 1rem;
+
+                li {
+                    margin-bottom: 0.75rem;
+                }
             }
         }
     }

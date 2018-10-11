@@ -10,10 +10,17 @@
 
     .project-desc {
 
-        h3.title,
+        h3.highlight {
+            display: inline-block;
+            color: $off-white;
+
+            &::before {
+                background-color: $off-black;
+            }
+        }
+
         h4 {
             display: inline;
-            background-color: $off-black;
             color: $off-white;
         }
     }

@@ -1,12 +1,15 @@
 #about {
 
-    h2 {
-        background-color: $indigo;
+    h2.highlight {
         color: $off-white;
+
+        &::before {
+            background-color: $indigo;
+        }
     }
 
     .copy-container {
-        max-width: 600px;
-        margin-left: -323px;
+        max-width: 590px;
+        margin-left: -333px;
     }
 }
