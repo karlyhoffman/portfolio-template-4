@@ -23,14 +23,15 @@ const SkillsSection = () => {
                         <li>Vue</li>
                         <li>React</li>
                         <li>Angular</li>
+                        <li>WordPress</li>
                         <li>jQuery</li>
-                        <li>GSAP</li>
                     </ul>
                 </div>
 
                 <div className="list">
                     <h3>Tools</h3>
                     <ul>
+                        <li>GSAP</li>
                         <li>Webpack/Gulp</li>
                         <li>Adobe Creative Suite</li>
                         <li>Visual Studio Code</li>
