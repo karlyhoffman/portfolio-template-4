@@ -9,7 +9,7 @@ const IntroSection = () => {
     }
 
     return (
-        <section id="intro" className="animate">
+        <section id="intro" className="active animate">
             <SplitString elementTag="h1">Karly Hoffman</SplitString>
 
             <div className="subhead">

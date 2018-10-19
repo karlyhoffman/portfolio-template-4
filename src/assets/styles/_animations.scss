@@ -50,10 +50,3 @@ section.animate {
         right: 0;
     }
 }
-
-section.leave-slide {
-    
-    & > *:not(.highlight) {
-        opacity: 0;
-    }
-}
