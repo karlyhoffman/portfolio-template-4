@@ -47,8 +47,6 @@ class AnimationContainer extends Component {
     goToSlide = (dir, slideIdx, callback) => {
         this.setState({ isAnimating: true });
         this.props.updateSection(slideIdx);
-
-        const currentSlide = this.state.sections[this.props.activeSection];
         
         this.state.sections.forEach((section) => {
             section.classList.remove("leave-slide");
@@ -59,14 +57,12 @@ class AnimationContainer extends Component {
             // console.log("next slide", slideIdx);
             prevSlide.classList.add("leave-slide");
             prevSlide.classList.remove("animate");
-            currentSlide.classList.add("animate");
         }
         else if (dir === "prev") {
             const prevSlide = this.state.sections[this.props.activeSection + 1];
             // console.log("prev slide", slideIdx);
             prevSlide.classList.add("leave-slide");
             prevSlide.classList.remove("animate");
-            currentSlide.classList.add("animate");
         }
 
         callback();
@@ -74,7 +70,12 @@ class AnimationContainer extends Component {
 
     onSlideChangeEnd = () => {
         const _this = this;
-        setTimeout(()=> { _this.setState({ isAnimating: false }) }, 750); // add pause to prevent skipping slides
+        const currentSlide = this.state.sections[this.props.activeSection];
+
+        setTimeout(()=> { 
+            currentSlide.classList.add("animate");
+            _this.setState({ isAnimating: false }) 
+        }, 500); // add pause to prevent skipping slides
     }
 
     componentDidMount() {
