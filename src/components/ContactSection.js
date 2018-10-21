@@ -7,12 +7,12 @@ const ContactSection = () => {
         <section id="contact">
             <SplitString elementTag="h2">Contact</SplitString>
             <ul>
-                <li>Email</li>
-                <li>Github</li>
-                <li>Linkedin</li>
-                <li>Codepen</li>
-                <li>Ello</li>
-                <li>Resume</li>
+                <li className="appear">Email</li>
+                <li className="appear">Github</li>
+                <li className="appear">Linkedin</li>
+                <li className="appear">Codepen</li>
+                <li className="appear">Ello</li>
+                <li className="appear">Resume</li>
             </ul>
         </section>
     )

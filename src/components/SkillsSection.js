@@ -8,7 +8,7 @@ const SkillsSection = () => {
             <SplitString elementTag="h2">Expertise</SplitString>
             
             <div className="skills-container">
-                <div className="list">
+                <div className="list appear">
                     <h3>CSS</h3>
                     <ul>
                         <li>UI Development</li>
@@ -17,7 +17,7 @@ const SkillsSection = () => {
                     </ul>
                 </div>
 
-                <div className="list">
+                <div className="list appear">
                     <h3>JavaScript</h3>
                     <ul>
                         <li>Vue</li>
@@ -28,7 +28,7 @@ const SkillsSection = () => {
                     </ul>
                 </div>
 
-                <div className="list">
+                <div className="list appear">
                     <h3>Tools</h3>
                     <ul>
                         <li>GSAP</li>

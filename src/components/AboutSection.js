@@ -8,9 +8,9 @@ const AboutSection = () => {
             <SplitString elementTag="h2">Web editor turned web developer</SplitString>
             
             <div className="copy-container">
-                <p>Gained <strong>experience writing and organizing content</strong> for web pages, now brings that content to life through programming.</p>
-                <p>Has <strong>an eye for detail</strong> and the ability to add functionality to any page or application.</p>
-                <p><strong>Knowledgeable, dependable, and versatile</strong> in the web industry.</p>
+                <p className="appear">Gained <strong>experience writing and organizing content</strong> for web pages, now brings that content to life through programming.</p>
+                <p className="appear">Has <strong>an eye for detail</strong> and the ability to add functionality to any page or application.</p>
+                <p className="appear"><strong>Knowledgeable, dependable, and versatile</strong> in the web industry.</p>
             </div>
         </section>
     )

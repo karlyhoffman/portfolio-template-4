@@ -18,6 +18,7 @@
             flex-basis: 0;
             text-align: center;
             padding: 0 1vw;
+            transform: translateY(20px);
 
             h3 {
                 background-color: $off-black;
@@ -31,6 +32,31 @@
                     margin-bottom: 0.75rem;
                 }
             }
+        }
+    }
+
+    .appear {
+        transform: translateY(0);
+        transition: transform 0.5s ease-out 0.5s;
+    }
+
+    &.animate {
+        .appear:nth-child(1) {
+            transform: translateY(0);
+            transition: transform 0.5s ease-out 0.5s, 
+                        opacity 0.75s linear 0.5s;
+        }
+
+        .appear:nth-child(2) {
+            transform: translateY(0);
+            transition: transform 0.5s ease-out 0.7s, 
+                        opacity 0.75s linear 0.7s;
+        }
+
+        .appear:nth-child(3) {
+            transform: translateY(0);
+            transition: transform 0.5s ease-out 0.9s, 
+                        opacity 0.75s linear 0.9s;
         }
     }
 }

@@ -12,7 +12,7 @@ const IntroSection = () => {
         <section id="intro" className="active animate">
             <SplitString elementTag="h1">Karly Hoffman</SplitString>
 
-            <div className="subhead">
+            <div className="subhead appear">
                 <div className="detail">{bgLines}</div>
                 <p>Chicago-based Front End Developer.</p>
             </div>

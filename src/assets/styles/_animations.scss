@@ -40,6 +40,11 @@ span.word {
     }
 }
 
+.appear {
+    opacity: 0;
+    transition: opacity 0.75s linear 1s;
+}
+
 section.animate {
 
     .word::after {
@@ -48,5 +53,9 @@ section.animate {
 
     .highlight::before {
         right: 0;
+    }
+
+    .appear {
+        opacity: 1;
     }
 }

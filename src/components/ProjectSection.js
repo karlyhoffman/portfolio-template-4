@@ -12,11 +12,11 @@ const ProjectSection = ({ title, description, technologies, image }) => {
                     className="title">
                         { title }
                 </SplitString>
-                <p>{ description }</p>
-                <h4>Technologies Used:</h4>
+                <p className="appear">{ description }</p>
+                <h4 className="appear">Technologies Used:</h4>
                 <ul>
                     {technologies.map((technology, idx) => (
-                        <li key={idx}>{ technology}</li>
+                        <li className="appear" key={idx}>{ technology}</li>
                     ))}
                 </ul>
             </div>
