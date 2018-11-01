@@ -1,11 +1,11 @@
 .project {
     position: relative;
-    padding-top: 20vh;
+    // padding-top: 20vh;
 
     h2 {
         background-color: $sunglow;
         color: $off-white;
-        margin-left: 2vw;
+        // margin-left: 2vw;
     }
 
     .project-desc {
@@ -21,8 +21,8 @@
 
         h4 {
             display: inline;
-            // background-color: $sunglow;
-            background-color: $off-black;
+            background-color: $sunglow;
+            // background-color: $off-black;
             color: $off-white;
         }
     }
@@ -38,31 +38,35 @@
         top: 5vw;
         right: 5vw;
         z-index: -1;
+
+        display: none;
     }
 
     &.animate {
-        .appear:nth-child(1) {
+        p.appear {
             transition-delay: 0.8s;
         }
 
-        .appear:nth-child(2) {
+        h4.appear {
             transition-delay: 1s;
         }
 
-        .appear:nth-child(3) {
-            transition-delay: 1.2s;
-        }
+        ul {
+            li:nth-child(1) {
+                transition-delay: 1s;
+            }
 
-        .appear:nth-child(4) {
-            transition-delay: 1.4s;
-        }
+            li:nth-child(2) {
+                transition-delay: 1.15s;
+            }
 
-        .appear:nth-child(5) {
-            transition-delay: 1.6s;
-        }
+            li:nth-child(3) {
+                transition-delay: 1.4s;
+            }
 
-        .appear:nth-child(6) {
-            transition-delay: 1.8s;
+            li:nth-child(4) {
+                transition-delay: 1.55s;
+            }
         }
     }
 }

@@ -16,7 +16,11 @@ const ProjectSection = ({ title, description, technologies, image }) => {
                 <h4 className="appear">Technologies Used:</h4>
                 <ul>
                     {technologies.map((technology, idx) => (
-                        <li className="appear" key={idx}>{ technology}</li>
+                        <li 
+                            className="appear" 
+                            key={idx}>
+                                { technology}
+                        </li>
                     ))}
                 </ul>
             </div>
