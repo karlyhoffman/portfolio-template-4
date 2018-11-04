@@ -1,45 +1,55 @@
 .project {
     position: relative;
-    // padding-top: 20vh;
 
-    h2 {
-        background-color: $sunglow;
-        color: $off-white;
-        // margin-left: 2vw;
-    }
+    .copy-container {
+        width: 90vw;
+        height: 100vh;
+        padding-top: 30vh;
 
-    .project-desc {
-
-        h3.highlight {
+        h2 {
             display: inline-block;
+            background-color: $sunglow;
             color: $off-white;
+        }
 
-            &::before {
-                background-color: $off-black;
+        .project-desc {
+            max-width: 850px;
+
+            h3.highlight {
+                display: inline-block;
+                color: $off-white;
+
+                &::before {
+                    background-color: $off-black;
+                }
+            }
+
+            h4 {
+                display: inline;
+                background-color: $sunglow;
+                color: $off-white;
+            }
+
+            ul {
+                line-height: 1.25;
+                margin-top: 5px;
             }
         }
 
-        h4 {
-            display: inline;
-            background-color: $sunglow;
-            // background-color: $off-black;
-            color: $off-white;
+        .img-container {
+            position: absolute;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            width: 70vw;
+            height: 38vw;
+            top: 5vw;
+            right: 5vw;
+            z-index: -1;
+
+            display: none;
         }
-    }
-
-    .img-container {
-        position: absolute;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-        width: 70vw;
-        height: 38vw;
-        top: 5vw;
-        right: 5vw;
-        z-index: -1;
-
-        display: none;
     }
 
     &.animate {

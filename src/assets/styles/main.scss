@@ -27,6 +27,7 @@ body {
 
 h1, h2, h3 {
 	font-family: $apercu-bold;
+	line-height: 1.1;
 	margin: 15px auto;
 }
 
@@ -43,7 +44,6 @@ h2 {
 
 h3 {
 	font-size: 2.25rem;
-	margin-bottom: 20px;
 	padding: 0 2vw;
 }
 
@@ -53,6 +53,7 @@ h4 {
 }
 
 p {
+	line-height: 1.25;
 	margin-bottom: 1.4rem;
 }
 
