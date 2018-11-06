@@ -52,7 +52,17 @@
         }
     }
 
+    #good-reason {
+        opacity: 0;
+        transition: opacity 0.25s ease-in 0.5s;
+    }
+
     &.animate {
+
+        #good-reason {
+            opacity: 1;
+        }
+
         p.appear {
             transition-delay: 0.8s;
         }

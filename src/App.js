@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './assets/styles/main.scss';
 
-import AnimationContainer from './utils/AnimationContainer';
+import AnimationContainer from './utils/FullpageLocking';
 import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
