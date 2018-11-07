@@ -1,22 +1,34 @@
 import React from "react";
 
-const ProjectAnimations = ({ section }) => {
+import rockoImg from "../assets/images/hennessy/rocko-min.jpg";
+import fabricImg from "../assets/images/hennessy/fabric-min.jpg";
+import hennessyImg from "../assets/images/hennessy/hennessy-min.jpg";
+import streetImg from "../assets/images/hennessy/street-min.jpg";
+import victorImg from "../assets/images/hennessy/victor-min.jpg";
+import yinImg from "../assets/images/hennessy/yin-min.jpg";
 
-  if ( section === 5 ) {
-    return (
+const ProjectAnimations = ({ section, direction }) => {
+
+  return <div className={`anim-container ${direction} section-${section}`}>
+      <div id="hennessy">
+        <img src={rockoImg} alt="" />
+        <img src={fabricImg} alt="" />
+        <img src={hennessyImg} alt="" />
+        <img src={streetImg} alt="" />
+        <img src={victorImg} alt="" />
+        <img src={yinImg} alt="" />
+      </div>
+
       <div id="good-reason">
         <div id="parent-circle">
-          <div className="circle blue"></div>
-          <div className="circle pink"></div>
-          <div className="circle lime"></div>
-          <div className="circle orange"></div>
-          <div className="circle teal"></div>
+          <div className="circle blue" />
+          <div className="circle pink" />
+          <div className="circle lime" />
+          <div className="circle orange" />
+          <div className="circle teal" />
         </div>
       </div>
-    )
-  } else {
-    return null;
-  }
+    </div>;
 
 };
 

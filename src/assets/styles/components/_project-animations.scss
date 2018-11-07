@@ -1,24 +1,83 @@
+// Hennessy Animation
+#hennessy {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+        position: absolute;
+        display: block;
+
+        &:nth-child(1) { // rocko
+            width: 21%;
+            top: 4vh;
+            left: 33%;
+            z-index: 1;
+        }
+
+        &:nth-child(2) { // fabric            
+            width: 20%;
+            bottom: -35vh;
+            left: 35%;
+            z-index: 1;
+        }
+
+        &:nth-child(3) { // drinks
+            width: 18%;
+            top: 8vh;
+            right: 4%;
+            z-index: 1;
+        }
+
+        &:nth-child(4) { // street
+            width: 18%;
+            bottom: 0;
+            right: 24%;
+            z-index: 1;
+        }
+
+        &:nth-child(5) { // victor
+            width: 20%;
+            bottom: 5%;
+            right: 5%;
+            z-index: 2;
+        }
+
+        &:nth-child(6) { // yin
+            width: 17%;
+            top: 17vh;
+            left: 53%;
+            z-index: 1;
+        }
+    }
+}
+
 // Good Reason Animation
 #good-reason {
     display: block;
     position: absolute;
+    top: 18vh;
+    right: 14vw;
     z-index: -1;
 
     #parent-circle {
         position: relative;
-        width: 20vw;
-        height: 20vw;
+        width: 25vw;
+        height: 25vw;
         border: 0.4vw solid rgba(0, 0, 0, 0.4);
         border-radius: 50%;
         transform: rotate(0deg);
         transition: transform 0.7s linear;
-        animation: rotate 7s infinite linear;
+        animation: rotate 6s infinite linear;
 
         .circle {
             display: block;
             position: absolute;
-            width: 16%;
-            height: 16%;
+            width: 17.5%;
+            height: 17.5%;
             margin: -8%;
             border-radius: 50%;
             top: 50%; 
@@ -26,23 +85,23 @@
 
             &.blue {
                 background-color: #416ba9;
-                transform: translate(10vw); // parent size/2
+                transform: translate(12.5vw); // parent size/2
             }
             &.pink {
                 background-color: #e6427a;
-                transform: rotate(72deg) translate(10vw) rotate(-72deg);
+                transform: rotate(72deg) translate(12.5vw) rotate(-72deg);
             }
             &.lime {
                 background-color: #cddb00;
-                transform: rotate(72deg * 2) translate(10vw) rotate(-72deg * 2);
+                transform: rotate(72deg * 2) translate(12.5vw) rotate(-72deg * 2);
             }
             &.orange {
                 background-color: #e0592a;
-                transform: rotate(72deg * 3) translate(10vw) rotate(-72deg * 3);
+                transform: rotate(72deg * 3) translate(12.5vw) rotate(-72deg * 3);
             }
             &.teal {
                 background-color: #57b6b2;
-                transform: rotate(72deg * 4) translate(10vw) rotate(-72deg * 4);
+                transform: rotate(72deg * 4) translate(12.5vw) rotate(-72deg * 4);
             }
         }
     }

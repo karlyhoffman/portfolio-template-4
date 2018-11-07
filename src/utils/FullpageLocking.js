@@ -84,7 +84,10 @@ class AnimationContainer extends Component {
     }
     
     render() {
-        const { children, activeSection } = this.props;
+        const { 
+            children, 
+            activeSection
+        } = this.props;
 
         return (
             <div id="fp-container" className={`active-${activeSection}`}>

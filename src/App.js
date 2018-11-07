@@ -8,16 +8,13 @@ import SkillsSection from './components/SkillsSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
 
-import mcdImg from "./assets/images/mcd.png"
-import natgeoImg from "./assets/images/natgeo.png"
-import goodReasonImg from "./assets/images/good-reason.png"
-
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             section: 0,
+            scrollDir: null,
             projects: [
                 {
                     title: "McDonald's Visual Design Hub",
@@ -27,11 +24,10 @@ class App extends Component {
                         "React",
                         "WordPress",
                         "GSAP"
-                    ],
-                    image: mcdImg
+                    ]
                 },
                 {
-                    title: "National Geographic | Hennessey",
+                    title: "National Geographic | Hennessy",
                     link: "https://www.nationalgeographic.com/hennessy/",
                     description: "A responsive website showcasing artists and their Hennessy X.O. inspired artwork.",
                     technologies: [
@@ -46,8 +42,7 @@ class App extends Component {
                         "Lightbox photo gallery",
                         "Google Analytics",
                         "Responsive design",
-                    ],
-                    image: natgeoImg
+                    ]
                 },
                 {
                     title: "Good Reason Houston",
@@ -64,8 +59,7 @@ class App extends Component {
                         "Full-page locking",
                         "Transitional animations",
                         "Responsive design",
-                    ],
-                    image: goodReasonImg
+                    ]
                 }
             ]
         }
@@ -80,7 +74,11 @@ class App extends Component {
     }
 
     render() {
-        const { section, projects } = this.state;
+        const { 
+            section, 
+            projects,
+            scrollDir
+        } = this.state;
 
         return (
             <AnimationContainer
@@ -98,6 +96,8 @@ class App extends Component {
                         <ProjectSection 
                             {...project}
                             key={idx}
+                            section={section}
+                            direction={scrollDir}
                         />
                     ))}
 
