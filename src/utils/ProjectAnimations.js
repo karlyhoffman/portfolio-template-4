@@ -7,9 +7,9 @@ import streetImg from "../assets/images/hennessy/street-min.jpg";
 import victorImg from "../assets/images/hennessy/victor-min.jpg";
 import yinImg from "../assets/images/hennessy/yin-min.jpg";
 
-const ProjectAnimations = ({ section, direction }) => {
+const ProjectAnimations = ({ section }) => {
 
-  return <div className={`anim-container ${direction} section-${section}`}>
+  return <div className={`anim-container section-${section}`}>
       <div id="hennessy">
         <img src={rockoImg} alt="" />
         <img src={fabricImg} alt="" />

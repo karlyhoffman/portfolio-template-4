@@ -77,7 +77,6 @@ class App extends Component {
         const { 
             section, 
             projects,
-            scrollDir
         } = this.state;
 
         return (
@@ -97,7 +96,6 @@ class App extends Component {
                             {...project}
                             key={idx}
                             section={section}
-                            direction={scrollDir}
                         />
                     ))}
 

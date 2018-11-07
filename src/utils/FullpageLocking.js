@@ -71,7 +71,7 @@ class AnimationContainer extends Component {
                     section.classList.remove("active") : 
                     section.classList.add("active", "animate");
             });
-        }, 600); // add pause to prevent skipping slides
+        }, 750); // add pause to prevent skipping slides
     }
 
     componentDidMount() {
