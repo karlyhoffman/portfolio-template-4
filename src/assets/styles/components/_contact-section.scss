@@ -13,6 +13,30 @@
 
         li {
             padding: 0 10px;
+
+            &:nth-child(1) a:hover {
+                color: $indigo;
+            }
+
+            &:nth-child(2) a:hover {
+                color: $java;
+            }
+
+            &:nth-child(3) a:hover {
+                color: $sunglow;
+            }
+
+            &:nth-child(4) a:hover {
+                color: $carrot;
+            }
+
+            &:nth-child(5) a:hover {
+                color: $java; 
+            }
+
+            &:nth-child(6) a:hover {
+                color: $indigo;
+            }
         }
     }
 

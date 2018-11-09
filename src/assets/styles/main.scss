@@ -58,6 +58,16 @@ p {
 	margin-bottom: 1.4rem;
 }
 
+a {
+	color: $off-black;
+	text-decoration: none;
+	transition: color 0.15s linear 0s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 strong {
 	font-family: $apercu-medium;
 }
