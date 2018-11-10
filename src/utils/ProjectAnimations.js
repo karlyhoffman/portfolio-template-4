@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TweenMax, TimelineMax, Power3 } from "gsap/all";
 
 import fryImg from "../assets/images/mcd/fry.svg";
 import ketchupFryImg from "../assets/images/mcd/fry-ketchup.svg";
@@ -19,6 +20,11 @@ class ProjectAnimations extends Component {
     };
 
     this.fries = [];
+    this.tl = new TimelineMax({ paused: true });
+  }
+  
+  componentDidMount() {
+    this.enterFriesAnimation();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -28,7 +34,46 @@ class ProjectAnimations extends Component {
   }
 
   componentDidUpdate() {
-    if (this.state.section === 3) {}
+    if (this.state.section === 3) {
+      this.tl.progress(0).play();
+    }
+  }
+
+  enterFriesAnimation() {
+    let counter = 1;
+    let timer = 135;
+    const ketchupFryIndex = Math.floor(this.state.numOfFries / 2);
+
+    this.fries.forEach((element, index) => {
+      // Animate ketchup fry first
+      if (index === ketchupFryIndex) {
+        const enterTween = TweenMax.from(element, 1.15, {
+          y: "30vw",
+          ease: Power3.easeOut
+        });
+        this.tl.add([enterTween], 1.25);
+      }
+      // Alternate animating fries around middle fry
+      else {
+        const fryToAnimate = this.fries[ketchupFryIndex + counter];
+        const enterTween = TweenMax.from(fryToAnimate, 1.15, {
+          y: "30vw",
+          ease: Power3.easeOut,
+        });
+        const delay = timer/100;
+        timer += 10; // add 0.1s to start time    
+        this.tl.add([enterTween], delay);
+
+        if (counter === 0) {
+          counter++;
+        } else if (counter > 0) {
+          counter = -(counter);
+        } else {
+          counter = -(counter);
+          counter++;
+        }
+      }
+    });
   }
 
   render() {
@@ -53,7 +98,7 @@ class ProjectAnimations extends Component {
         </div>
 
         {/* Addition fries for enter/leave animation */}
-        <div className="fries-transition">
+        {/* <div className="fries-transition">
           {fryElements.map((imgSrc, index) => (
             <div
               className="fry"
@@ -63,7 +108,7 @@ class ProjectAnimations extends Component {
               <img src={fryImg} alt="" />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div id="hennessy">
