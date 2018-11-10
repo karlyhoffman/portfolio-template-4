@@ -6,6 +6,7 @@ import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectSection from './components/ProjectSection';
+import ProjectAnimations from "./utils/ProjectAnimations";
 import ContactSection from './components/ContactSection';
 
 class App extends Component {
@@ -90,6 +91,8 @@ class App extends Component {
                     <AboutSection />
 
                     <SkillsSection />
+
+                    <ProjectAnimations section={section} />
 
                     {projects.map((project, idx) => (
                         <ProjectSection 

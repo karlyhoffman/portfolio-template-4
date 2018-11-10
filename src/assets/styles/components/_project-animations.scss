@@ -1,4 +1,12 @@
-// Hennessy Animation
+.anim-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 #hennessy {
     display: block;
     position: absolute;
@@ -58,36 +66,6 @@
     }
 }
 
-#fp-container.active-3 #hennessy img,
-#fp-container.active-5 #hennessy img {
-    transition-delay: 0;
-
-    &:nth-child(1) { // rocko
-        transform: translateY(-25vh);
-    }
-
-    &:nth-child(2) { // fabric            
-        transform: translateY(-29vh);
-    }
-
-    &:nth-child(3) { // drinks
-        transform: translateY(-21vh);
-    }
-
-    &:nth-child(4) { // street
-        transform: translateY(-23vh);
-    }
-
-    &:nth-child(5) { // victor
-        transform: translateY(-23vh);
-    }
-
-    &:nth-child(6) { // yin
-        transform: translateY(-31vh);
-    }
-}
-
-// Good Reason Animation
 #good-reason {
     display: block;
     position: absolute;
@@ -141,61 +119,89 @@
             }
         }
     }
-}
 
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-// Animations
-.animate {
-
-    .anim-container {
-        &.section-4 {
-            #hennessy {
-                opacity: 1;
-
-                img {
-                    &:nth-child(1) { // rocko
-                        transform: translateY(-15vh);
-                    }
-
-                    &:nth-child(2) { // fabric            
-                        transform: translateY(-22vh);
-                    }
-
-                    &:nth-child(3) { // drinks
-                        transform: translateY(-13vh);
-                    }
-
-                    &:nth-child(4) { // street
-                        transform: translateY(-19vh);
-                    }
-
-                    &:nth-child(5) { // victor
-                        transform: translateY(-14vh);
-                    }
-
-                    &:nth-child(6) { // yin
-                        transform: translateY(-20vh);
-                    }
-                }
-            }
+    @-webkit-keyframes rotate {
+        from {
+            -webkit-transform: rotate(0deg);
         }
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+}
 
-        &.section-5 {
-            #good-reason {
-                opacity: 1;
-                transform: scale(1);
+// Start Project Animations
+#fp-container {
+
+    &.active-4 {
+        #hennessy {
+            opacity: 1;
+
+            img {
+                &:nth-child(1) { // rocko
+                    transform: translateY(-15vh);
+                }
+
+                &:nth-child(2) { // fabric            
+                    transform: translateY(-22vh);
+                }
+
+                &:nth-child(3) { // drinks
+                    transform: translateY(-13vh);
+                }
+
+                &:nth-child(4) { // street
+                    transform: translateY(-19vh);
+                }
+
+                &:nth-child(5) { // victor
+                    transform: translateY(-14vh);
+                }
+
+                &:nth-child(6) { // yin
+                    transform: translateY(-20vh);
+                }
             }
         }
     }
 
+    &.active-5 {
+        #hennessy img {
+            transition-delay: 0;
+
+            &:nth-child(1) { // rocko
+                transform: translateY(-25vh);
+            }
+
+            &:nth-child(2) { // fabric            
+                transform: translateY(-29vh);
+            }
+
+            &:nth-child(3) { // drinks
+                transform: translateY(-21vh);
+            }
+
+            &:nth-child(4) { // street
+                transform: translateY(-23vh);
+            }
+
+            &:nth-child(5) { // victor
+                transform: translateY(-23vh);
+            }
+
+            &:nth-child(6) { // yin
+                transform: translateY(-31vh);
+            }
+        }
+
+        #good-reason {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.animate { // all project sections
     p.appear {
         transition-delay: 0.8s;
     }
