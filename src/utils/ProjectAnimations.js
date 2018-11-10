@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-// import fryImg from "../assets/images/mcd/fry.svg";
-// import ketchupFryImg from "../assets/images/mcd/fry-ketchup.svg";
+import fryImg from "../assets/images/mcd/fry.svg";
+import ketchupFryImg from "../assets/images/mcd/fry-ketchup.svg";
 import rockoImg from "../assets/images/hennessy/rocko-min.jpg";
 import fabricImg from "../assets/images/hennessy/fabric-min.jpg";
 import hennessyImg from "../assets/images/hennessy/hennessy-min.jpg";
@@ -14,8 +14,11 @@ class ProjectAnimations extends Component {
     super(props);
 
     this.state = {
-      section: this.props.section
+      section: this.props.section,
+      numOfFries: 13
     };
+
+    this.fries = [];
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,41 +27,64 @@ class ProjectAnimations extends Component {
     }
   }
 
+  componentDidUpdate() {
+    if (this.state.section === 3) {}
+  }
+
   render() {
-    const { section } = this.state;
+    const { numOfFries } = this.state;
 
-    if (section > 1) {
-      return (
-        <div className="anim-container">
-          {/* <div id="mcd">
-            <img src={fryImg} alt="" />
-            <img src={ketchupFryImg} alt="" />
-          </div> */}
+    const fryElements = Array.from({ length: numOfFries }, (item, index) => 
+      index === Math.floor(numOfFries/2) ? ketchupFryImg : fryImg
+    );
 
-          <div id="hennessy">
-            <img src={rockoImg} alt="" />
-            <img src={fabricImg} alt="" />
-            <img src={hennessyImg} alt="" />
-            <img src={streetImg} alt="" />
-            <img src={victorImg} alt="" />
-            <img src={yinImg} alt="" />
-          </div>
-
-          <div id="good-reason">
-            <div id="parent-circle">
-              <div className="circle blue" />
-              <div className="circle pink" />
-              <div className="circle lime" />
-              <div className="circle orange" />
-              <div className="circle teal" />
+    return <div className="anim-container">
+      <div id="mcd">
+        <div className="fry-container">
+          {fryElements.map((imgSrc, index) => (
+            <div
+              className={index === Math.floor(numOfFries / 2) ? 'ketchup-fry' : 'fry'}
+              key={index}
+              ref={div => this.fries[index] = div}
+            >
+              <img src={imgSrc} alt="" />
             </div>
-          </div>
+          ))}
         </div>
-      );
-    } else {
-      return null;
-    }
 
+        {/* Addition fries for enter/leave animation */}
+        <div className="fries-transition">
+          {fryElements.map((imgSrc, index) => (
+            <div
+              className="fry"
+              key={index}
+              ref={div => this.fries[index] = div}
+            >
+              <img src={fryImg} alt="" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div id="hennessy">
+        <img src={rockoImg} alt="" />
+        <img src={fabricImg} alt="" />
+        <img src={hennessyImg} alt="" />
+        <img src={streetImg} alt="" />
+        <img src={victorImg} alt="" />
+        <img src={yinImg} alt="" />
+      </div>
+
+      <div id="good-reason">
+        <div id="parent-circle">
+          <div className="circle blue" />
+          <div className="circle pink" />
+          <div className="circle lime" />
+          <div className="circle orange" />
+          <div className="circle teal" />
+        </div>
+      </div>
+    </div>;
   }
 };
 

@@ -5,9 +5,7 @@ class ProjectSection extends PureComponent {
     constructor(props) {
         super(props);
 
-        const { title, description, technologies, image } = this.props;
-
-        this.state = { title, description, technologies, image };
+        this.state = { ...props };
     }
 
     render() {

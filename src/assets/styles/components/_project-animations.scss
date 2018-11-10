@@ -7,6 +7,50 @@
     bottom: 0;
 }
 
+#mcd {
+    opacity: 0;
+
+    .fry-container,
+    .fries-transition {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+
+        .ketchup-fry, .fry {
+            position: relative;
+            display: block;
+            width: 5vw;
+            padding: 5px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &:nth-child(1n) {
+                padding-top: 100px;
+            }
+
+            &:nth-child(2n) {
+                padding-top: 40px;
+            }
+
+            &:nth-child(3n) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .fry-container {
+        justify-content: center;
+        margin: 100vh 0 0 auto;
+        transform: rotate(-45deg) translate(54vw, 10vw);
+    }
+    .fries-transition {
+        justify-content: space-around;
+    }
+}
+
 #hennessy {
     display: block;
     position: absolute;
@@ -132,6 +176,12 @@
 
 // Start Project Animations
 #fp-container {
+
+    &.active-3 {
+        #mcd {
+            opacity: 1;
+        }
+    }
 
     &.active-4 {
         #hennessy {
