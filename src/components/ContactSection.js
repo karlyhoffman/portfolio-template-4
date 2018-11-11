@@ -2,65 +2,48 @@ import React from 'react';
 import SplitString from "../utils/SplitString";
 
 const ContactSection = () => {
+    const contactLinks = [
+        {
+            name: "Email",
+            url: "mailto:karlyhoffman@gmail.com"
+        },
+        {
+            name: "Github",
+            url: "https://github.com/karlyhoffman"
+        },
+        {
+            name: "Linkedin",
+            url: "https://www.linkedin.com/in/karlyhoffman/"
+        },
+        {
+            name: "Codepen",
+            url: "https://codepen.io/karlyhoffman/"
+        },
+        // {
+        //     name: "Ello",
+        //     url: "https://ello.co/ello-govna"
+        // },
+        {
+            name: "Resume",
+            url: "https://karlyhoffman.github.io/"
+        }
+    ]
 
     return (
         <section id="contact">
             <SplitString elementTag="h2">Contact</SplitString>
             <ul>
-                <li className="appear">
-                    <a 
-                        href="mailto:karlyhoffman@gmail.com" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Email
-                    </a>
-                </li>
-                <li className="appear">
-                    <a
-                        href="https://github.com/karlyhoffman"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Github
-                    </a>
-                </li>
-                <li className="appear">
-                    <a
-                        href="https://www.linkedin.com/in/karlyhoffman/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Linkedin
-                    </a>
-                </li>
-                <li className="appear">
-                    <a
-                        href="https://codepen.io/karlyhoffman/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Codepen
-                    </a>
-                </li>
-                <li className="appear">
-                    <a
-                        href="https://ello.co/ello-govna"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ello
-                    </a>
-                </li>
-                <li className="appear">
-                    <a
-                        href="https://karlyhoffman.github.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Resume
-                    </a>
-                </li>
+                {contactLinks.map((contact, index) => (
+                    <li className="appear" key={index}>
+                        <a
+                            href={contact.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {contact.name}
+                        </a>
+                    </li>
+                ))}
             </ul>
         </section>
     )
