@@ -11,7 +11,11 @@
     .skills-container {
         display: flex;
         justify-content: center;
-        width: 55vw;
+        flex-direction: column;
+
+        @include breakpoint(tablet) {
+            flex-direction: row;
+        }
 
         .list {
             flex-grow: 1;
@@ -19,6 +23,7 @@
             text-align: center;
             padding: 0 1vw;
             transform: translateY(20px);
+            width: 225px;
 
             h3 {
                 background-color: $off-black;

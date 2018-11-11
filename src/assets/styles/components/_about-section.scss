@@ -10,7 +10,11 @@
 
     .copy-container {
         max-width: 590px;
-        margin-left: -333px;
+        margin-left: 0;
+        
+        @include breakpoint(laptop) {
+            margin-left: -333px;
+        }
     }
 
     .appear {
