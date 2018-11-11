@@ -20,33 +20,53 @@ body {
 	background-color: $off-white;
 	color: $off-black;
 	font-family: $apercu-light;
-	font-size: 21px;
+	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
 	padding: 0;
+
+	@include breakpoint(tablet) {
+		font-size: 21px;
+	}
 }
 
 h1, h2, h3 {
 	font-family: $apercu-bold;
 	line-height: 1.1;
-	margin: 15px auto;
+	margin: 10px auto;
+
+	@include breakpoint(tablet) {
+		margin: 15px auto;
+	}
 }
 
 h1 {
-	font-size: 7rem;
+	font-size: 12vw;
 	padding: 0 5vw;
+
+	@include breakpoint(laptop) {
+		font-size: 7rem;
+	}
 }
 
 h2 {
-	font-size: 3.5rem;
+	font-size: 2.75rem;
 	margin-bottom: 3vh;
 	padding: 0 2vw;
+
+	@include breakpoint(tablet) {
+		font-size: 3.5rem;
+	}
 }
 
 h3 {
-	font-size: 2.25rem;
+	font-size: 1.75rem;
 	padding: 0 2vw;
+
+	@include breakpoint(tablet) {
+		font-size: 2.25rem;
+	}
 }
 
 h4 {

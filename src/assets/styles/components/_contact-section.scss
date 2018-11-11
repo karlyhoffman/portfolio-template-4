@@ -10,9 +10,20 @@
 
     ul {
         display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+            flex-direction: row;  
+            text-align: left;
+        }
 
         li {
-            padding: 0 10px;
+            padding-bottom: 15px;
+
+            @include breakpoint(tablet) {
+                padding: 0 10px;
+            }
 
             &:nth-child(1) a:hover {
                 color: $indigo;

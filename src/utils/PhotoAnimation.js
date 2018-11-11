@@ -60,7 +60,7 @@ class PhotoAnimation extends Component {
                     opacity: 1,
                     ease: Sine.easeOut
                 });
-                tl.add([enterTween], 1.25);
+                tl.add([enterTween], 1.5);
             });
             return tl;
         }

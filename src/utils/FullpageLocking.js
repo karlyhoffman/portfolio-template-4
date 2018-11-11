@@ -32,6 +32,47 @@ class FullpageLocking extends Component {
         event.preventDefault();
     }
 
+    handleKeydown = (event) => {
+        const keyCodes = { UP: 38, DOWN: 40 }
+        const PRESSED_KEY = event.keyCode;
+        if (PRESSED_KEY === keyCodes.UP) {
+            this.goToPrevSlide();
+            event.preventDefault();
+        } else if (PRESSED_KEY === keyCodes.DOWN) {
+            this.goToNextSlide();
+            event.preventDefault();
+        }
+    }
+
+    handleMobileSwipe = (el) => {
+        const _this = this;
+        const swipe_det = {};
+        swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
+        const max_x = 30;  //max x difference for vertical swipe
+        const min_y = 50;  //min y swipe for vertical swipe
+        const ele = el;
+        ele.addEventListener('touchstart', function (e) {
+            var t = e.touches[0];
+            swipe_det.sX = t.screenX;
+            swipe_det.sY = t.screenY;
+        }, false);
+        ele.addEventListener('touchmove', function (e) {
+            var t = e.touches[0];
+            swipe_det.eX = t.screenX;
+            swipe_det.eY = t.screenY;
+        }, false);
+        ele.addEventListener('touchend', function (e) {
+            //vertical detection
+            if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x) && (swipe_det.eY > 0)))) {
+                // if (swipe_det.eY > swipe_det.sY) direc = "down";
+                // else direc = "up";
+                if (swipe_det.eY > swipe_det.sY) _this.goToPrevSlide();
+                else _this.goToNextSlide();
+            }
+            swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
+        }, false);
+    }
+
     goToPrevSlide = () => {
         const previousIdx = this.props.activeSection - 1;
         if (previousIdx > -1 && !this.state.isAnimating) 
@@ -76,11 +117,14 @@ class FullpageLocking extends Component {
 
     componentDidMount() {
         this.findSections();
+        this.handleMobileSwipe(window);
         window.addEventListener('wheel', this.handleScroll.bind(this));
+        window.addEventListener("keydown", this.handleKeydown.bind(this));
     }
 
     componentWillUnmount() {
         window.removeEventListener('wheel', this.handleScroll.bind(this));
+        window.removeEventListener("keydown", this.handleKeydown.bind(this));
     }
     
     render() {

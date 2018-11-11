@@ -4,7 +4,11 @@
     .copy-container {
         width: 90vw;
         height: 100vh;
-        padding-top: 30vh;
+        padding-top: 25vh;
+
+        @include breakpoint(tablet) {
+            padding-top: 30vh;
+        }
 
         h2 {
             display: inline-block;

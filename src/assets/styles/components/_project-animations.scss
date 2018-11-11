@@ -22,6 +22,7 @@
             position: relative;
             display: block;
             width: 5vw;
+            min-width: 35px;
             padding: 5px;
 
             img {
@@ -46,7 +47,11 @@
     .fry-container {
         justify-content: center;
         margin: 100vh 0 0 auto;
-        transform: rotate(-45deg) translate(53vw, 10vw);
+        transform: rotate(-45deg) translate(85vw, 0vw);
+
+        @include breakpoint(tablet) {
+            transform: rotate(-45deg) translate(53vw, 10vw);   
+        }
     }
 
     .fries-transition {
@@ -69,6 +74,7 @@
         position: absolute;
         display: block;
         transition: transform 1.75s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        min-width: 80px;
 
         img {
             width: 100%;
