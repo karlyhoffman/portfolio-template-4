@@ -114,7 +114,7 @@ class FryAnimation extends Component {
         );
 
         return (
-            <div className="fries">
+            <div id="mcd" className="fries">
                 <div className="fry-container">
                     {fryElements.map((imgSrc, index) => (
                         <div

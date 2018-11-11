@@ -9,52 +9,50 @@
 
 #mcd {
     opacity: 0;
+    display: block;
+    position: absolute;
 
-    .fries {
-        display: block;
-        position: absolute;
+    .fry-container,
+    .fries-transition {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
 
-        .fry-container,
-        .fries-transition {
-            display: flex;
-            flex-direction: row;
-            width: 100vw;
+        .ketchup-fry, .fry {
+            position: relative;
+            display: block;
+            width: 5vw;
+            padding: 5px;
 
-            .ketchup-fry, .fry {
-                position: relative;
-                display: block;
-                width: 5vw;
-                padding: 5px;
+            img {
+                width: 100%;
+                height: auto;
+            }
 
-                img {
-                    width: 100%;
-                    height: auto;
-                }
+            &:nth-child(1n) {
+                padding-top: 100px;
+            }
 
-                &:nth-child(1n) {
-                    padding-top: 100px;
-                }
+            &:nth-child(2n) {
+                padding-top: 40px;
+            }
 
-                &:nth-child(2n) {
-                    padding-top: 40px;
-                }
-
-                &:nth-child(3n) {
-                    padding-top: 0;
-                }
+            &:nth-child(3n) {
+                padding-top: 0;
             }
         }
+    }
 
-        .fry-container {
-            justify-content: center;
-            margin: 100vh 0 0 auto;
-            transform: rotate(-45deg) translate(53vw, 10vw);
-        }
-        .fries-transition {
-            position: absolute;
-            top: 100vh;
-            justify-content: space-around;
-        }
+    .fry-container {
+        justify-content: center;
+        margin: 100vh 0 0 auto;
+        transform: rotate(-45deg) translate(53vw, 10vw);
+    }
+
+    .fries-transition {
+        position: absolute;
+        top: 100vh;
+        justify-content: space-around;
     }
 }
 
@@ -65,13 +63,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
     transition: opacity 0.2s ease-in 0.5s;
 
-    img {
+    .photo-container {
         position: absolute;
         display: block;
         transition: transform 1.75s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+        img {
+            width: 100%;
+            opacity: 0;
+        }
 
         &:nth-child(1) { // rocko
             width: 21%;
@@ -110,7 +112,7 @@
 
         &:nth-child(6) { // yin
             width: 17%;
-            top: 38vh;
+            top: 33vh;
             left: 53%;
             z-index: 1;
         }
@@ -185,77 +187,14 @@
 #fp-container {
 
     &.active-2,
-    &.active-3 {
-        #mcd {
-            opacity: 1;
-        }
-    }
-
+    &.active-3,
     &.active-4 {
         #mcd {
             opacity: 1;
         }
-
-        #hennessy {
-            opacity: 1;
-
-            img {
-                &:nth-child(1) { // rocko
-                    transform: translateY(-15vh);
-                }
-
-                &:nth-child(2) { // fabric            
-                    transform: translateY(-22vh);
-                }
-
-                &:nth-child(3) { // drinks
-                    transform: translateY(-13vh);
-                }
-
-                &:nth-child(4) { // street
-                    transform: translateY(-19vh);
-                }
-
-                &:nth-child(5) { // victor
-                    transform: translateY(-14vh);
-                }
-
-                &:nth-child(6) { // yin
-                    transform: translateY(-20vh);
-                }
-            }
-        }
     }
 
     &.active-5 {
-        #hennessy img {
-            transition-delay: 0;
-
-            &:nth-child(1) { // rocko
-                transform: translateY(-25vh);
-            }
-
-            &:nth-child(2) { // fabric            
-                transform: translateY(-29vh);
-            }
-
-            &:nth-child(3) { // drinks
-                transform: translateY(-21vh);
-            }
-
-            &:nth-child(4) { // street
-                transform: translateY(-23vh);
-            }
-
-            &:nth-child(5) { // victor
-                transform: translateY(-23vh);
-            }
-
-            &:nth-child(6) { // yin
-                transform: translateY(-31vh);
-            }
-        }
-
         #good-reason {
             opacity: 1;
             transform: scale(1);

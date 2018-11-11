@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import FryAnimation from "./FryAnimation.js";
-
-import rockoImg from "../assets/images/hennessy/rocko-min.jpg";
-import fabricImg from "../assets/images/hennessy/fabric-min.jpg";
-import hennessyImg from "../assets/images/hennessy/hennessy-min.jpg";
-import streetImg from "../assets/images/hennessy/street-min.jpg";
-import victorImg from "../assets/images/hennessy/victor-min.jpg";
-import yinImg from "../assets/images/hennessy/yin-min.jpg";
+import PhotoAnimation from "./PhotoAnimation.js";
 
 class ProjectAnimations extends Component {
   constructor(props) {
@@ -28,18 +22,8 @@ class ProjectAnimations extends Component {
 
     return (
       <div className="anim-container">
-        <div id="mcd">
-          <FryAnimation section={section} />
-        </div>
-
-        <div id="hennessy">
-          <img src={rockoImg} alt="" />
-          <img src={fabricImg} alt="" />
-          <img src={hennessyImg} alt="" />
-          <img src={streetImg} alt="" />
-          <img src={victorImg} alt="" />
-          <img src={yinImg} alt="" />
-        </div>
+        <FryAnimation section={section} />        
+        <PhotoAnimation section={section} />
 
         <div id="good-reason">
           <div id="parent-circle">
