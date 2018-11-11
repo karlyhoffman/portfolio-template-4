@@ -19,7 +19,7 @@ class App extends Component {
             projects: [
                 {
                     title: "McDonald's Visual Design Hub",
-                    link: null,
+                    link: "https://design.mcdonalds.com/",
                     description: "A responsive website built using React and a decoupled Wordpress CMS to feature the company's style guidelines and design assets.",
                     technologies: [
                         "React.js",

@@ -25,6 +25,11 @@
 
                 &::before {
                     background-color: $off-black;
+                    transition: background-color 0.15s ease-in-out 0s;
+                }
+
+                &:hover::before {
+                    background-color: $sunglow;
                 }
             }
 

@@ -14,7 +14,7 @@ const IntroSection = () => {
 
             <div className="subhead appear">
                 <div className="detail">{bgLines}</div>
-                <p>Chicago-based Front End Developer.</p>
+                <p>Chicago-based Frontend Developer.</p>
             </div>
         </section>
     )
