@@ -90,7 +90,7 @@
 
         &:nth-child(2) { // fabric            
             width: 20%;
-            bottom: -50vh;
+            bottom: -45vh;
             left: 35%;
             z-index: 1;
         }
@@ -134,7 +134,7 @@
     opacity: 0;
     transform: scale(10);
     transition: opacity 0.25s ease-in 0.5s, 
-                transform 0.75s linear 0.25s;
+                transform 0.75s linear 0.5s;
 
     #parent-circle {
         position: relative;
@@ -206,6 +206,15 @@
             transform: scale(1);
         }
     }
+}
+
+p.appear,
+h4.appear,
+ul li:nth-child(1),
+ul li:nth-child(2),
+ul li:nth-child(3),
+ul li:nth-child(4)  {
+    transition-delay: 0s;
 }
 
 .animate { // all project sections
