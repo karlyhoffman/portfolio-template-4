@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-class AnimationContainer extends Component {
+class FullpageLocking extends Component {
     constructor(props) {
         super()
 
@@ -97,4 +97,4 @@ class AnimationContainer extends Component {
     }
 }
 
-export default AnimationContainer;
+export default FullpageLocking;

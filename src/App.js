@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './assets/styles/main.scss';
 
-import AnimationContainer from './utils/FullpageLocking';
+import FullpageLocking from './utils/FullpageLocking';
 import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
@@ -81,7 +81,7 @@ class App extends Component {
         } = this.state;
 
         return (
-            <AnimationContainer
+            <FullpageLocking
                 activeSection={section}
                 updateSection={this.handleSectionUpdate}
                 >
@@ -104,7 +104,7 @@ class App extends Component {
 
                     <ContactSection />
 
-            </AnimationContainer>
+            </FullpageLocking>
         )
     }
 }

@@ -10,44 +10,51 @@
 #mcd {
     opacity: 0;
 
-    .fry-container,
-    .fries-transition {
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
+    .fries {
+        display: block;
+        position: absolute;
 
-        .ketchup-fry, .fry {
-            position: relative;
-            display: block;
-            width: 5vw;
-            padding: 5px;
+        .fry-container,
+        .fries-transition {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+            .ketchup-fry, .fry {
+                position: relative;
+                display: block;
+                width: 5vw;
+                padding: 5px;
 
-            &:nth-child(1n) {
-                padding-top: 100px;
-            }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
 
-            &:nth-child(2n) {
-                padding-top: 40px;
-            }
+                &:nth-child(1n) {
+                    padding-top: 100px;
+                }
 
-            &:nth-child(3n) {
-                padding-top: 0;
+                &:nth-child(2n) {
+                    padding-top: 40px;
+                }
+
+                &:nth-child(3n) {
+                    padding-top: 0;
+                }
             }
         }
-    }
 
-    .fry-container {
-        justify-content: center;
-        margin: 100vh 0 0 auto;
-        transform: rotate(-45deg) translate(53vw, 10vw);
-    }
-    .fries-transition {
-        justify-content: space-around;
+        .fry-container {
+            justify-content: center;
+            margin: 100vh 0 0 auto;
+            transform: rotate(-45deg) translate(53vw, 10vw);
+        }
+        .fries-transition {
+            position: absolute;
+            top: 100vh;
+            justify-content: space-around;
+        }
     }
 }
 
@@ -177,6 +184,7 @@
 // Start Project Animations
 #fp-container {
 
+    &.active-2,
     &.active-3 {
         #mcd {
             opacity: 1;
@@ -184,6 +192,10 @@
     }
 
     &.active-4 {
+        #mcd {
+            opacity: 1;
+        }
+
         #hennessy {
             opacity: 1;
 
