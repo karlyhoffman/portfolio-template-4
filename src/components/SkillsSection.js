@@ -13,7 +13,8 @@ const SkillsSection = () => {
                     <ul>
                         <li>UI Development</li>
                         <li>SCSS</li>
-                        <li>Animations</li>
+                        <li>SVG & CSS Animations</li>
+                        <li>Responsive Styling</li>
                     </ul>
                 </div>
 
@@ -35,6 +36,7 @@ const SkillsSection = () => {
                         <li>Webpack/Gulp</li>
                         <li>Adobe Creative Suite</li>
                         <li>Visual Studio Code</li>
+                        <li>JIRA</li>
                     </ul>
                 </div>
             </div>
