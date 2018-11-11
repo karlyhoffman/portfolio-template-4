@@ -17,6 +17,7 @@
         }
 
         .project-desc {
+            opacity: 0;
             max-width: 600px;
 
             h3.highlight {
@@ -58,6 +59,38 @@
             z-index: -1;
 
             display: none;
+        }
+    }
+
+    &.animate {
+        .project-desc {
+            opacity: 1;
+        }
+
+        p.appear {
+            transition-delay: 0.85s;
+        }
+
+        h4.appear {
+            transition-delay: 1s;
+        }
+
+        ul {
+            li:nth-child(1) {
+                transition-delay: 1.15s;
+            }
+
+            li:nth-child(2) {
+                transition-delay: 1.3s;
+            }
+
+            li:nth-child(3) {
+                transition-delay: 1.45s;
+            }
+
+            li:nth-child(4) {
+                transition-delay: 1.6s;
+            }
         }
     }
 }
