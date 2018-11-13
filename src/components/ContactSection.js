@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from "react-ga";
 import SplitString from "../utils/SplitString";
 
 const ContactSection = () => {
@@ -35,13 +36,12 @@ const ContactSection = () => {
             <ul>
                 {contactLinks.map((contact, index) => (
                     <li className="appear" key={index}>
-                        <a
-                            href={contact.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {contact.name}
-                        </a>
+                        <ReactGA.OutboundLink
+                            eventLabel={contact.name}
+                            to={contact.url}
+                            target="_blank">
+                                {contact.name}
+                        </ReactGA.OutboundLink>
                     </li>
                 ))}
             </ul>

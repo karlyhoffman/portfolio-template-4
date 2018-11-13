@@ -9,6 +9,11 @@ import ProjectSection from './components/ProjectSection';
 import ProjectAnimations from "./utils/ProjectAnimations";
 import ContactSection from './components/ContactSection';
 
+import ReactGA from "react-ga";
+const GAuserToken = "";
+ReactGA.initialize(GAuserToken);
+ReactGA.pageview("/");
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -71,6 +76,22 @@ class App extends Component {
         this.setState({
             section: currentSection,
             scrollDir: direction
+        });
+
+        const sectionNames = [
+            "Intro",
+            "About",
+            "Skills",
+            "McD",
+            "Hennessy",
+            "Good Reason",
+            "Contact"
+        ];
+
+        ReactGA.event({
+            category: 'Views',
+            action: `Section Change`,
+            label: `${sectionNames[currentSection]}`
         });
     }
 

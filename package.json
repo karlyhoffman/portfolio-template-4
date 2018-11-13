@@ -2,11 +2,13 @@
   "name": "portfolio-template-4",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://karlyhoffman.com",
   "dependencies": {
     "gsap": "^2.0.2",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-ga": "^2.5.3",
     "react-scripts": "2.0.4"
   },
   "scripts": {

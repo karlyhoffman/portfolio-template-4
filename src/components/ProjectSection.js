@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import ReactGA from "react-ga";
 import SplitString from "../utils/SplitString";
 
 class ProjectSection extends PureComponent {
@@ -22,17 +23,16 @@ class ProjectSection extends PureComponent {
                 <div className="copy-container">
                     <h2>Work</h2>
                     <div className="project-desc">
-                        <a 
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <SplitString
-                                elementTag="h3"
-                                className="title">
-                                {title}
-                            </SplitString>
-                        </a>
+                        <ReactGA.OutboundLink
+                            eventLabel={title}
+                            to={link}
+                            target="_blank">
+                                <SplitString
+                                    elementTag="h3"
+                                    className="title">
+                                        {title}
+                                </SplitString>
+                        </ReactGA.OutboundLink>
                         <p className="appear">{description}</p>
                         <h4 className="appear">Technologies Used:</h4>
                         <ul>
