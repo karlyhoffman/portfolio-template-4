@@ -1,23 +1,41 @@
-import React from 'react';
+import React, { Component } from "react";
 import SplitString from "../utils/SplitString";
 
-const IntroSection = () => {
+class IntroSection extends Component {
+    constructor(props) {
+        super()
 
-    let bgLines = [];
-    for (let i = 0; i < 4; i++) {
-        bgLines.push(<div className="bg-line" key={i} />);
+        this.state = {
+            loaded: false
+        };
     }
 
-    return (
-        <section id="intro" className="active animate">
-            <SplitString elementTag="h1">Karly Hoffman</SplitString>
+    componentDidMount() {
+        setTimeout(() => { 
+            this.setState({ loaded: true });
+        }, 150);
+    }
 
-            <div className="subhead appear">
-                <div className="detail">{bgLines}</div>
-                <p>Chicago-based Frontend Developer.</p>
-            </div>
-        </section>
-    )
+    render() {
+        const { loaded } = this.state;
+        const loadedClass = loaded ? 'animate' : '';
+
+        return (
+            <section id="intro" className={`active ${loadedClass}`}>
+                <SplitString elementTag="h1">Karly Hoffman</SplitString>
+
+                <div className="subhead appear">
+                    <div className="detail">
+                        <div className="bg-line" key="blue" />
+                        <div className="bg-line" key="teal" />
+                        <div className="bg-line" key="yellow" />
+                        <div className="bg-line" key="orange" />
+                    </div>
+                    <p>Chicago-based Frontend Developer.</p>
+                </div>
+            </section>
+        )
+    }
 }
 
 export default IntroSection;
