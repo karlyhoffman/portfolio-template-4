@@ -51,6 +51,26 @@
         }
     }
 
+    footer {
+        position: absolute;
+        text-align: end;
+        left: -5vw;
+        right: -5vw;
+        bottom: 0;
+        font-size: 15px;
+        padding: 10px 15px;
+        transform: translateY(25px);
+        transition: transform 0.35s linear 1.75s;
+
+        a:hover {
+            color: $carrot;
+        }
+
+        span {
+            padding-right: 15px;
+        }
+    }
+
     &.animate {
         .appear:nth-child(1) {
             transition: opacity 0.75s linear 0.5s;
@@ -74,6 +94,10 @@
 
         .appear:nth-child(6) {
             transition: opacity 0.75s linear 1.25s;
+        }
+
+        footer {
+            transform: translateY(0);
         }
     }
 }

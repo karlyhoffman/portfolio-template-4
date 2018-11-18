@@ -45,6 +45,16 @@ const ContactSection = () => {
                     </li>
                 ))}
             </ul>
+
+            <footer>
+                <span>&copy; 2018 Karly Hoffman</span>
+                <ReactGA.OutboundLink
+                    eventLabel="Viewed Source Code"
+                    to="https://github.com/karlyhoffman/portfolio-template-4"
+                    target="_blank">
+                    View Source Code
+                </ReactGA.OutboundLink>
+            </footer>
         </section>
     )
 }
