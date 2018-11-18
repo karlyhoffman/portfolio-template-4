@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { TweenMax, TimelineMax, Sine } from "gsap/all";
 
-import rockoImg from "../assets/images/hennessy/rocko-min.jpg";
-import fabricImg from "../assets/images/hennessy/fabric-min.jpg";
-import hennessyImg from "../assets/images/hennessy/hennessy-min.jpg";
-import streetImg from "../assets/images/hennessy/street-min.jpg";
-import victorImg from "../assets/images/hennessy/victor-min.jpg";
-import yinImg from "../assets/images/hennessy/yin-min.jpg";
+import rockoImg from "../assets/images/hennessy/rocko.jpg";
+import fabricImg from "../assets/images/hennessy/fabric.jpg";
+import hennessyImg from "../assets/images/hennessy/hennessy.jpg";
+import streetImg from "../assets/images/hennessy/street.jpg";
+import victorImg from "../assets/images/hennessy/victor.jpg";
+import yinImg from "../assets/images/hennessy/yin.jpg";
+
+const C = CSSPlugin; // eslint-disable-line
 
 class PhotoAnimation extends Component {
     constructor(props) {
