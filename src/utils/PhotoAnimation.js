@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TweenMax, TimelineMax, Sine } from "gsap/all";
+import CSSPlugin from "gsap/CSSPlugin";
 
 import rockoImg from "../assets/images/hennessy/rocko.jpg";
 import fabricImg from "../assets/images/hennessy/fabric.jpg";
@@ -59,7 +60,7 @@ class PhotoAnimation extends Component {
                 const randomDistance = Math.random() * (10 - 5) + 5; // min: 5, max: 10
                 const enterTween = TweenMax.to(img, 1, {
                     y: `-${randomDistance.toFixed(2)}vw`,
-                    opacity: 1,
+                    autoAlpha: 1,
                     ease: Sine.easeOut
                 });
                 tl.add([enterTween], 1.5);
@@ -74,7 +75,7 @@ class PhotoAnimation extends Component {
                 const randomDistance = Math.random() * (25 - 20) + 20; // min: 15, max: 20
                 const leaveTween = TweenMax.to(img, 0.75, {
                   y: `-${randomDistance.toFixed(2)}vw`,
-                  opacity: 0,
+                  autoAlpha: 0,
                   ease: Sine.easeOut
                 });
 

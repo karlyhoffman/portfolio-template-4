@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { TweenMax, TimelineMax, Power3, Sine } from "gsap/all";
+import CSSPlugin from 'gsap/CSSPlugin';
 
 import fryImg from "../assets/images/mcd/fry.svg";
 import ketchupFryImg from "../assets/images/mcd/fry-ketchup.svg";
+
+const C = CSSPlugin; // eslint-disable-line
 
 class FryAnimation extends Component {
     constructor(props) {
