@@ -17,15 +17,6 @@
 }
 
 @font-face {
-  font-family: 'Apercu-Regular';
-  src: url('../fonts/Apercu/Apercu-Regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Apercu/Apercu-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Apercu/Apercu-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/Apercu/Apercu-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Apercu/Apercu-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
   font-family: 'Apercu-Light';
   src: url('../fonts/Apercu/Apercu-Light.eot'); /* IE9 Compat Modes */
   src: url('../fonts/Apercu/Apercu-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -34,17 +25,6 @@
        url('../fonts/Apercu/Apercu-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-  font-family: 'Apercu-Light-Italic';
-  src: url('../fonts/Apercu/Apercu-LightItalic.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Apercu/Apercu-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Apercu/Apercu-LightItalic.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/Apercu/Apercu-LightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Apercu/Apercu-LightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
 $apercu-bold: 'Apercu-Bold', sans-serif;
 $apercu-medium: 'Apercu-Medium', sans-serif;
-$apercu: 'Apercu-Regular', sans-serif;
 $apercu-light: 'Apercu-Light', sans-serif;
-$apercu-light-italic: 'Apercu-Light-Italic', sans-serif;
