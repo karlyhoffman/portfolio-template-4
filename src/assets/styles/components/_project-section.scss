@@ -10,10 +10,13 @@
             padding-top: 30vh;
         }
 
-        h2 {
+        h2.highlight {
             display: inline-block;
-            background-color: $sunglow;
             color: $off-white;
+
+            &::before {
+                background-color: $sunglow;
+            }
         }
 
         .project-desc {
@@ -26,7 +29,6 @@
 
                 &::before {
                     background-color: $off-black;
-                    transition: background-color 0.15s ease-in-out 0s;
                 }
 
                 &:hover::before {
@@ -91,6 +93,24 @@
             li:nth-child(4) {
                 transition-delay: 1.6s;
             }
+        }
+    }
+}
+
+// Keep "Work" title on Hennessy Page highlighted
+div#fp-container.active-3 section.project,
+div#fp-container.active-4 section.project,
+div#fp-container.active-5 section.project  {
+
+    h2.highlight {
+        &::before {
+            transition-delay: 0.8s !important;
+            right: 0 !important;
+        }
+
+        .word::after {
+            transition-delay: 1s !important;
+            transform: translateY(0%) !important;
         }
     }
 }

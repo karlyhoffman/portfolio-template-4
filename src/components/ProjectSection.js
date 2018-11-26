@@ -21,7 +21,7 @@ class ProjectSection extends PureComponent {
         return (
             <section className="project">
                 <div className="copy-container">
-                    <h2>Work</h2>
+                    <SplitString elementTag="h2">Work</SplitString>
                     <div className="project-desc">
                         <ReactGA.OutboundLink
                             eventLabel={title}
