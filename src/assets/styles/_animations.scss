@@ -2,12 +2,13 @@ span.word {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    padding: 7px 0 5px;
 
     &::after {
         content: attr(data-headline);
         position: relative;
         display: inline-block;
-        transform: translateY(-110%);
+        transform: translateY(-130%);
         transition: transform 1.25s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
     }
 
@@ -35,7 +36,7 @@ span.word {
         top: 0;
         left: 0;
         right: 100%;
-        bottom: 0.3rem;
+        bottom: 0;
         transition: right 0.4s ease-out 0.1s;
     }
 }

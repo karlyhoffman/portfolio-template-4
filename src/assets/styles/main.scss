@@ -33,7 +33,7 @@ body {
 
 h1, h2, h3 {
 	font-family: $apercu-bold;
-	line-height: 1.1;
+	line-height: 1;
 	margin: 10px auto;
 
 	@include breakpoint(tablet) {
