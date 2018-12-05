@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './assets/styles/main.scss';
 
 import FullpageLocking from './utils/FullpageLocking';
+import Navbar from './components/Navbar';
 import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
@@ -106,6 +107,9 @@ class App extends Component {
                 activeSection={section}
                 updateSection={this.handleSectionUpdate}
                 >
+                    <Navbar 
+                        section={section}
+                        updateSection={this.handleSectionUpdate} />
 
                     <IntroSection />
 

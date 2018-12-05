@@ -126,6 +126,10 @@ class FullpageLocking extends Component {
         window.removeEventListener('wheel', this.handleScroll.bind(this));
         window.removeEventListener("keydown", this.handleKeydown.bind(this));
     }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps.activeSection);
+    }
     
     render() {
         const { 
