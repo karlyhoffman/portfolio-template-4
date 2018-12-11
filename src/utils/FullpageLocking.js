@@ -75,41 +75,30 @@ class FullpageLocking extends Component {
 
     goToPrevSlide = () => {
         const previousIdx = this.props.activeSection - 1;
-        if (previousIdx > -1 && !this.state.isAnimating) 
-            this.goToSlide("prev", previousIdx, this.onSlideChangeEnd);
+        if (previousIdx > -1 && !this.state.isAnimating) this.goToSlide(previousIdx, this.props.activeSection);
     }
 
     goToNextSlide = () => {
         const nextIndex = this.props.activeSection + 1;
-        if (nextIndex < this.state.sections.length && !this.state.isAnimating) 
-            this.goToSlide("next", nextIndex, this.onSlideChangeEnd);
+        if (nextIndex < this.state.sections.length && !this.state.isAnimating) this.goToSlide(nextIndex, this.props.activeSection);
     }
 
-    goToSlide = (dir, slideIdx, callback) => {
+    goToSlide = (toSlideIdx, fromSlideIdx) => {
         this.setState({ isAnimating: true });
-        this.props.updateSection(slideIdx);
+        this.props.updateSection(toSlideIdx);
+        this.state.sections[fromSlideIdx].classList.remove("animate");
 
-        let prevSlide;
-        if (dir === "next") {
-            prevSlide = this.state.sections[this.props.activeSection - 1];
-        } 
-        else if (dir === "prev") {
-            prevSlide = this.state.sections[this.props.activeSection + 1];
-        }
-        prevSlide.classList.remove("animate");
-
-        callback();
+        this.onSlideChangeEnd();
     }
 
     onSlideChangeEnd = () => {
         const _this = this;
-
-        setTimeout(()=> { 
+        setTimeout(() => {
             _this.setState({ isAnimating: false });
 
             _this.state.sections.forEach((section) => { // add/remove animation classes
-                section !== _this.state.sections[_this.props.activeSection] ? 
-                    section.classList.remove("active") : 
+                section !== _this.state.sections[_this.props.activeSection] ?
+                    section.classList.remove("active") :
                     section.classList.add("active", "animate");
             });
         }, 750); // add pause to prevent skipping slides
@@ -127,8 +116,14 @@ class FullpageLocking extends Component {
         window.removeEventListener("keydown", this.handleKeydown.bind(this));
     }
 
-    componentWillReceiveProps(nextProps) {
-        console.log(nextProps.activeSection);
+    shouldComponentUpdate(nextProps) {
+        const nextSlideIdx = nextProps.activeSection;
+        const currentSlideIx = this.props.activeSection;
+        if (nextSlideIdx !== currentSlideIx) {
+            this.goToSlide(nextSlideIdx, currentSlideIx);
+            return true;
+        }
+        return false;
     }
     
     render() {
