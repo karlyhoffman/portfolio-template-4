@@ -1,36 +1,45 @@
-ul.navbar {
-    position: fixed;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+#fp-container {
 
-    li {
-        cursor: pointer;
-        display: block;
-        flex: 1;
-        height: 8px;
-        transition: all 0.1s ease-in-out 0s;
+    ul.navbar {
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        transition: all 0.2s ease-in-out 0s;
 
-        &:nth-of-type(1) {
-            background-color: $indigo;
+        li {
+            cursor: pointer;
+            display: block;
+            flex: 1;
+            width: 8px;
+            transition: all 0.1s ease-in-out 0s;
+        
+            &:nth-of-type(1) {
+                background-color: $indigo;
+            }
+
+            &:nth-of-type(2) {
+                background-color: $java;
+            }
+
+            &:nth-of-type(3) {
+                background-color: $sunglow;
+            }
+
+            &:nth-of-type(4) {
+                background-color: $carrot;
+            }
+
+            &:hover {
+                flex: 3;
+            }
         }
+    }
 
-        &:nth-of-type(2) {
-            background-color: $java;
-        }
-
-        &:nth-of-type(3) {
-            background-color: $sunglow;
-        }
-
-        &:nth-of-type(4) {
-            background-color: $carrot;
-        }
-
-        &:hover {
-            flex: 3;
-        }
+    &.active-0 {
+        transform: translateX(-15px);
     }
 }
