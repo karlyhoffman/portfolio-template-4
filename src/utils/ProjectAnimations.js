@@ -11,10 +11,11 @@ class ProjectAnimations extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.section !== this.state.section) {
-      this.setState({ section: nextProps.section });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.section !== prevState.section) {
+      return { section: nextProps.section };
     }
+    else return null;
   }
 
   render() {
@@ -22,7 +23,7 @@ class ProjectAnimations extends Component {
 
     return (
       <div className="anim-container">
-        <FryAnimation section={section} />        
+        <FryAnimation section={section} />
         <PhotoAnimation section={section} />
 
         <div id="good-reason">
@@ -35,7 +36,7 @@ class ProjectAnimations extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 };
 
