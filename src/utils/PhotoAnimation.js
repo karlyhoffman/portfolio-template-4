@@ -35,18 +35,18 @@ class PhotoAnimation extends Component {
         this.photoAnimation();
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.section !== this.state.section) {
-            this.setState({ section: nextProps.section });
+    static getDerivedStateFromProps(nextProps, prevState) {        
+        if (nextProps.section !== prevState.section) {
+            return { section: nextProps.section };
         }
-        
+        else return null;
+    }
+
+    shouldComponentUpdate(nextProps) {
         if (nextProps.section === 4) {
             this.masterTimeline.progress(0).tweenTo("part2");
             return true;
-        } else if (nextProps.section === 3 && this.masterTimeline.progress() !== 0) {
-            this.masterTimeline.play();
-            return true;
-        } else if (nextProps.section === 5) {
+        } else if (0 < this.masterTimeline.progress() && this.masterTimeline.progress() < 1) {
             this.masterTimeline.play();
             return true;
         }

@@ -26,21 +26,21 @@ class FryAnimation extends Component {
         this.friesAnimation(this.fries2);
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.section !== this.state.section) {
-            this.setState({ section: nextProps.section });
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.section !== prevState.section) {
+            return { section: nextProps.section };
         }
+        else return null;
+    }
 
+    shouldComponentUpdate(nextProps) {
         if (nextProps.section === 3) {
             this.masterTimeline.progress(0).tweenTo("part2");
             return true;
-        } else if (nextProps.section === 2 && this.masterTimeline.progress() !== 0) {
+        } else if (0 < this.masterTimeline.progress() && this.masterTimeline.progress() < 1) {
             this.masterTimeline.play();
             return true;
-        } else if (nextProps.section === 4) {
-            this.masterTimeline.play();
-            return true;
-        }
+        } 
         return false;
     }
 
@@ -63,7 +63,7 @@ class FryAnimation extends Component {
                     const fryToAnimate = friesArray[ketchupFryIndex + counter];
                     const enterTween = TweenMax.from(fryToAnimate, 1, { y: "30vw", ease: Power3.easeOut });
                     const delay = timer / 100;
-                    timer += 10; // add 0.1s to start time
+                    timer += 5;
                     tl.add([enterTween], delay);
 
                     if (counter === 0) {
