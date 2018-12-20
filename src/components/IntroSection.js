@@ -23,16 +23,6 @@ class IntroSection extends Component {
         return (
             <section id="intro" className={`active ${loadedClass}`}>
                 <SplitString elementTag="h1">Karly Hoffman</SplitString>
-
-                <div className="subhead appear">
-                    <div className="detail">
-                        <div className="bg-line" key="blue" />
-                        <div className="bg-line" key="teal" />
-                        <div className="bg-line" key="yellow" />
-                        <div className="bg-line" key="orange" />
-                    </div>
-                    <p>Chicago-based Frontend Developer.</p>
-                </div>
             </section>
         )
     }

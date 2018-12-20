@@ -1,46 +1,120 @@
 #fp-container {
 
-    ul.navbar {
+    .nav {
         position: absolute;
-        flex-direction: column;
         display: flex;
+        justify-content: center;
+        align-items: center;
         left: 0;
         top: 0;
         bottom: 0;
+        width: 8px;
         z-index: 100;
-        transition: all 0.4s linear 0.8s;
-
-        li {
-            cursor: pointer;
-            display: block;
-            flex: 1;
+        opacity: 0;
+        animation: appearLeft 0.4s 1 forwards ease-out 0.75s;
+    
+        ul.navbar {
+            display: flex;
+            flex-direction: column;
             width: 8px;
-            transform-origin: center center;
-            transition: all 0.1s ease-in-out 0s;
-        
-            &:nth-of-type(1) {
-                background-color: $indigo;
-            }
+            height: 100vh;
 
-            &:nth-of-type(2) {
-                background-color: $java;
-            }
+            li {
+                display: block;
+                flex: 1;
+                box-sizing: border-box;
+                cursor: pointer;
+                width: 100%;
+                transform-origin: center center;
+                transition: all 0.25s ease-out 0s;
+            
+                &:nth-of-type(1) {
+                    background-color: $indigo;
+                }
 
-            &:nth-of-type(3) {
-                background-color: $sunglow;
-            }
+                &:nth-of-type(2) {
+                    background-color: $java;
+                }
 
-            &:nth-of-type(4) {
-                background-color: $carrot;
-            }
+                &:nth-of-type(3) {
+                    background-color: $sunglow;
+                }
 
-            &:hover {
-                flex: 3;
+                &:nth-of-type(4) {
+                    background-color: $carrot;
+                }
+
+                &:hover {
+                    flex: 3;
+                }
+            }
+        }
+
+        p.subhead {
+            display: none;
+            margin-left: 15px;
+            margin-bottom: 0;
+
+            br {
+                @include breakpoint(tablet) {
+                    display: none;
+                }
             }
         }
     }
 
-    &.active-0 ul.navbar {
-        transform: translateX(-15px);
+    &.active-0 .nav {
+        width: 100vw;
+        top: 28vh;
+        animation: appearIntro 1s 1 forwards ease-out 1.55s;
+
+        ul.navbar {
+            flex-direction: row;
+            width: auto;
+            height: auto;
+
+            li {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        p.subhead {
+            display: inline-block;
+        }
+    }
+
+    // Expand Nav-item based on current section
+    &.active-1 .nav ul.navbar li:nth-of-type(1),
+    &.active-2 .nav ul.navbar li:nth-of-type(2),
+    &.active-3 .nav ul.navbar li:nth-of-type(3),
+    &.active-4 .nav ul.navbar li:nth-of-type(3),
+    &.active-5 .nav ul.navbar li:nth-of-type(3),
+    &.active-6 .nav ul.navbar li:nth-of-type(4) { 
+        flex: 3;
+        transition: all 0.5s ease-out 0s;
+    }
+}
+
+@keyframes appearIntro {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appearLeft {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
