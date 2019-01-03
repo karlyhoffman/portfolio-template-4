@@ -1,9 +1,23 @@
 import React, { Component } from "react";
+import ReactGA from "react-ga";
 
 class Navbar extends Component {
 
     handleClick(sectionIdx) {
         this.props.updateSection(sectionIdx);
+
+        const sectionNames = {
+            1: "About",
+            2: "Skills",
+            3: "Projects",
+            6: "Contact",
+        }
+        
+        ReactGA.event({
+            category: 'Navbar',
+            action: `Navbar Click`,
+            label: `${sectionNames[sectionIdx]}`
+        });
     }
 
     render() {
