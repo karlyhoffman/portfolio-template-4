@@ -23,10 +23,18 @@ class Navbar extends Component {
     render() {
         return <div className="nav">
                     <ul className="navbar">
-                        <li key="about" onClick={ () => this.handleClick(1) } />
-                        <li key="skills" onClick={ () => this.handleClick(2) } />
-                        <li key="projects" onClick={ () => this.handleClick(3) } />
-                        <li key="contact" onClick={ () => this.handleClick(6) } />
+                        <li key="about" data-title="About" onClick={ () => this.handleClick(1) }>
+                            <span>About</span>
+                        </li>
+                        <li key="skills" data-title="Skills" onClick={ () => this.handleClick(2) }>
+                            <span>Skills</span>
+                        </li>
+                        <li key="projects" data-title="Projects" onClick={ () => this.handleClick(3) }>
+                            <span>Projects</span>
+                        </li>
+                        <li key="contact" data-title="Contact" onClick={ () => this.handleClick(6) }>
+                            <span>Contact</span>
+                        </li>
                     </ul>
                     <p className="subhead">Chicago-based <br/>Frontend Developer.</p>
                </div>;
