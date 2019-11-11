@@ -21,8 +21,8 @@ const SkillsSection = () => {
                 <div className="list appear">
                     <h3>JavaScript</h3>
                     <ul>
-                        <li>Vue</li>
                         <li>React</li>
+                        <li>Vue</li>
                         <li>Angular</li>
                         <li>WordPress</li>
                         <li>jQuery</li>
