@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-template-4",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": "https://karlyhoffman.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "react/react-in-jsx-scope": 0
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
