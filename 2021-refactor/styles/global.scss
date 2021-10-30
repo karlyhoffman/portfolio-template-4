@@ -1,9 +1,0 @@
-@use 'variables/colors.scss' as colors;
-
-body {
-  background-color: colors.$off-white;
-	color: colors.$off-black;
-	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}

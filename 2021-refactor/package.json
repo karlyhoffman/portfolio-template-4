@@ -1,31 +1,20 @@
 {
   "name": "portfolio-template-4",
-  "version": "2.0.0",
+  "version": "0.1.0",
   "private": true,
-  "homepage": "https://karlyhoffman.com",
-  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app",
-    "react/react-in-jsx-scope": 0
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
-    "next": "^10.0.4",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.32.0"
+    "next": "12.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "sass-resources-loader": "^2.1.1"
+    "eslint": "7",
+    "eslint-config-next": "12.0.1"
   }
 }
