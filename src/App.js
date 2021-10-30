@@ -11,8 +11,7 @@ import ProjectAnimations from "./utils/ProjectAnimations";
 import ContactSection from './components/ContactSection';
 
 import ReactGA from "react-ga";
-const GAuserToken = "";
-ReactGA.initialize(GAuserToken);
+ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TOKEN);
 ReactGA.pageview("/");
 
 class App extends Component {
