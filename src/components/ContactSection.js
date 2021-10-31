@@ -47,7 +47,7 @@ const ContactSection = () => {
             </ul>
 
             <footer>
-                <span>&copy; 2019 Karly Hoffman</span>
+                <span>&copy; {new Date().getFullYear() || ''} Karly Hoffman</span>
                 <ReactGA.OutboundLink
                     eventLabel="Viewed Source Code"
                     to="https://github.com/karlyhoffman/portfolio-template-4"

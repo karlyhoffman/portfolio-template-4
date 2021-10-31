@@ -1,0 +1,78 @@
+@use 'variables/breakpoints.scss' as breakpoints;
+@use 'variables/colors.scss' as colors;
+@use 'variables/fonts.scss' as fonts;
+
+/* http://meyerweb.com/eric/tools/css/reset/ | v2.0 */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/**/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: colors.$off-white;
+	color: colors.$off-black;
+	font-family: fonts.$apercu-light;
+	font-size: 16px;
+  line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoints.breakpoint(tablet) {
+		font-size: 21px;
+	}
+}
+
+h1, h2, h3 {
+	font-family: fonts.$apercu-bold;
+}
+
+h1 {
+	font-size: 12vw;
+
+	@include breakpoints.breakpoint(laptop) {
+		font-size: 7rem;
+	}
+}
+
+h2 {
+	font-size: 2.75rem;
+
+	@include breakpoints.breakpoint(tablet) {
+		font-size: 3.5rem;
+	}
+}
+
+h3 {
+	font-size: 1.75rem;
+
+	@include breakpoints.breakpoint(tablet) {
+		font-size: 2.25rem;
+	}
+}
+
+h4 {
+	font-family: fonts.$apercu-bold;
+}
+
+p {
+	line-height: 1.25;
+}
+
+a {
+	color: colors.$off-black;
+	text-decoration: none;
+	transition: color 0.15s linear 0s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+strong {
+	font-family: fonts.$apercu-medium;
+}

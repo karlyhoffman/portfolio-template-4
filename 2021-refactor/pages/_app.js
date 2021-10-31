@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import 'styles/global.scss';
+import { FullpageLockingProvider } from 'context/FullpageLockingContext';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function PortfolioApp({ Component, pageProps }) {
+  return (
+    <FullpageLockingProvider>
+      <Component {...pageProps} />
+    </FullpageLockingProvider>
+  );
 }
 
-export default MyApp
+export default PortfolioApp;

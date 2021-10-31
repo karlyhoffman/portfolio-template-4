@@ -11,7 +11,7 @@ import ProjectAnimations from "./utils/ProjectAnimations";
 import ContactSection from './components/ContactSection';
 
 import ReactGA from "react-ga";
-ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TOKEN);
+ReactGA.initialize(process.env.NODE_ENV !== 'development' ? process.env.NEXT_PUBLIC_GA_TOKEN : "");
 ReactGA.pageview("/");
 
 class App extends Component {
