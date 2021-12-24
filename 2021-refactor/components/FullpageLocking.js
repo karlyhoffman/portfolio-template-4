@@ -1,10 +1,24 @@
 import { useEffect } from 'react';
-import useStateRef from 'hooks/useStateRef';
+import classNames from 'classnames';
 import { useActiveSection } from 'context/FullpageLockingContext';
-import { FullpageSection } from 'components';
+import useStateRef from 'hooks/useStateRef';
 import styles from 'styles/components/fullpage-container.module.scss';
 
 const ANIMATION_DURATION = 750;
+
+function FullpageSection({ children, index }) {
+  const { activeIndex } = useActiveSection();
+  
+  return (
+    <section
+      className={classNames(styles.fp_section, {
+        [styles.active]: activeIndex === index,
+      })}
+    >
+      {children}
+    </section>
+  );
+}
 
 const FullpageLockingContainer = ({ children }) => {
   const SECTIONS = children.flat();
