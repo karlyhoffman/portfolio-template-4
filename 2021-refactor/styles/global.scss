@@ -12,8 +12,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html,
 body {
-  background-color: colors.$off-white;
-	color: colors.$off-black;
+  background-color: colors.$white;
+	color: colors.$black;
 	font-family: fonts.$apercu-light;
 	font-size: 16px;
   line-height: 1;
@@ -64,7 +64,7 @@ p {
 }
 
 a {
-	color: colors.$off-black;
+	color: colors.$black;
 	text-decoration: none;
 	transition: color 0.15s linear 0s;
 

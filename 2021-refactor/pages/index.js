@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { FullpageLockingContainer } from 'components';
+import { FullpageLockingContainer, Highlight } from 'components';
 import { SKILLS, PROJECTS, CONTACT_LINKS } from 'data';
 import styles from 'styles/pages/home.module.scss';
 
@@ -18,7 +18,9 @@ export default function Home() {
 
       <FullpageLockingContainer>
         <div id="intro">
-          <h1>Karly Hoffman</h1>
+          <Highlight sectionIndex={0}>
+            <h1>Karly Hoffman</h1>
+          </Highlight>
           <p className="subhead">
             Chicago-based <br />
             Frontend Developer.
@@ -26,7 +28,9 @@ export default function Home() {
         </div>
 
         <div id="about">
-          <h2>Web editor turned web developer</h2>
+          <Highlight sectionIndex={1} color="blue">
+            <h2>Web editor turned web developer</h2>
+          </Highlight>
           <div className="copy-container">
             <p className="appear">
               Gained <strong>experience writing and organizing content</strong>{' '}
@@ -45,7 +49,9 @@ export default function Home() {
         </div>
 
         <div id="skills">
-          <h2>Expertise</h2>
+          <Highlight sectionIndex={2} color="teal">
+            <h2>Expertise</h2>
+          </Highlight>
           <div className="skills-container">
             {SKILLS.map(({ type, skills }) => (
               <div key={type}>
@@ -61,10 +67,12 @@ export default function Home() {
         </div>
 
         {PROJECTS.map(
-          ({ id, title, url, description, technologies, features }) => (
+          ({ id, title, url, description, technologies, features }, index) => (
             <div id={`project-${id}`} key={id}>
               <div className="copy-container">
-                <h2>Work</h2>
+                <Highlight sectionIndex={3 + index} color="yellow">
+                  <h2>Work</h2>
+                </Highlight>
                 <div className="project-desc">
                   <h3>
                     <a href={url} target="_blank">{title}</a>
@@ -85,7 +93,9 @@ export default function Home() {
         )}
 
         <div id="contact">
-          <h2>Contact</h2>
+          <Highlight sectionIndex={3 + PROJECTS.length} color="orange">
+            <h2>Contact</h2>
+          </Highlight>
           <ul>
             {CONTACT_LINKS.map(({ label, url }) => (
               <li key={label + url}>

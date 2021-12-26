@@ -1,0 +1,50 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+  padding: 0px 15px 2px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    transition: right 0.4s ease-out 0.1s;
+    background-color: $black;
+  }
+
+  $colors-map: (
+    blue: $indigo,
+    teal: $java,
+    yellow: $sunglow,
+    orange: $carrot
+  );
+
+  @each $color, $variable in $colors-map {
+    &.#{"" + $color}::before {
+      background-color: $variable;
+    }
+  }
+  
+  .content {
+    display: inline-block;
+    position: relative;
+    transform: translateY(-130%);
+    transition: transform 1.25s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    color: $white;
+    line-height: 1.2;
+  }
+
+  &.animate {
+
+    &::before {
+      right: 0;
+    }
+
+    .content {
+      transform: translateY(0%);
+    }
+  }
+}
