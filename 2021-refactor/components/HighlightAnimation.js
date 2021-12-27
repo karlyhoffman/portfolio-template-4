@@ -5,11 +5,31 @@ import styles from 'styles/components/highlight-animation.module.scss';
 
 const Highlight = ({ children, sectionIndex, color }) => {
   const { activeIndex } = useActiveSection();
+  const { props: { children: text = '' } = {}, type: ElementType } =
+    children || {};
+
+  if (!text || !ElementType) {
+    console.error(
+      'Please wrap the <Highlight> component around an element tag and text.'
+    );
+    return null;
+  }
+
+  const words = text.split(' ');
 
   return (
-    <div className={classNames(styles.wrapper, styles[color], { [styles.animate]: sectionIndex === activeIndex })}>
-      <div className={styles.content}>{children}</div>
-    </div>
+    <ElementType
+      className={classNames(styles.wrapper, styles[color], {
+        [styles.animate]: sectionIndex === activeIndex,
+      })}
+    >
+      {words.map((word, i) => (
+        <span key={word + i} className={styles.word}>
+          {word}
+          &nbsp;
+        </span>
+      ))}
+    </ElementType>
   );
 };
 
