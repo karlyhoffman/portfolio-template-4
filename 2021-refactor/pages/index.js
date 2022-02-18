@@ -6,7 +6,7 @@ import styles from 'styles/pages/home.module.scss';
 
 export default function Home() {
   return (
-    <>
+    <div id={styles.homepage}>
       <Head>
         <title>Karly Hoffman | Web Developer</title>
         <meta
@@ -17,25 +17,23 @@ export default function Home() {
       </Head>
 
       <FullpageLockingContainer>
-        <div id="intro">
+        <div id={styles.intro}>
           <Highlight sectionIndex={0}>
-            <h1>Karly Hoffman</h1>
+            <h1>Portfolio Website</h1>
+            {/* <h1>Karly Hoffman</h1> */}
           </Highlight>
-          <p className="subhead">
-            Chicago-based <br />
-            Frontend Developer.
-          </p>
+          <p className="subhead">Chicago-based Frontend Developer.</p>
         </div>
 
-        <div id="about">
+        <div id={styles.about}>
           <Highlight sectionIndex={1} color="blue">
             <h2>Web editor turned web developer</h2>
           </Highlight>
           <div className="copy-container">
             <p className="appear">
-              Gained <strong>experience writing and organizing content</strong>{' '}
-              for web pages, now brings that content to life through
-              programming.
+              Gained{' '}
+              <strong>experience writing and organizing content</strong> for
+              web pages, now brings that content to life through programming.
             </p>
             <p className="appear">
               Has <strong>an eye for detail</strong> and the ability to add
@@ -48,13 +46,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="skills">
+        <div id={styles.skills}>
           <Highlight sectionIndex={2} color="teal">
             <h2>Expertise</h2>
           </Highlight>
-          <div className="skills-container">
+          <div className={styles.list_wrapper}>
             {SKILLS.map(({ type, skills }) => (
-              <div key={type}>
+              <div key={type} className={styles.list}>
                 <h3>{type}</h3>
                 <ul>
                   {skills.map((skill) => (
@@ -66,8 +64,14 @@ export default function Home() {
           </div>
         </div>
 
-        {PROJECTS.map(
-          ({ id, title, url, description, technologies, features }, index) => (
+        {PROJECTS.map(({
+          id,
+          title,
+          url,
+          description,
+          technologies,
+          features
+        }, index) => (
             <div id={`project-${id}`} key={id}>
               <div className="copy-container">
                 <Highlight sectionIndex={3 + index} color="yellow">
@@ -75,22 +79,21 @@ export default function Home() {
                 </Highlight>
                 <div className="project-desc">
                   <h3>
-                    <a href={url} target="_blank">{title}</a>
+                    <a href={url} target="_blank">
+                      {title}
+                    </a>
                   </h3>
                   <p>{description}</p>
                   <h4>Technologies Used:</h4>
                   <ul>
                     {technologies.map((technology) => (
-                      <li key={technology}>
-                        {technology}
-                      </li>
+                      <li key={technology}>{technology}</li>
                     ))}
                   </ul>
                 </div>
               </div>
             </div>
-          )
-        )}
+          ))}
 
         <div id="contact">
           <Highlight sectionIndex={3 + PROJECTS.length} color="orange">
@@ -116,6 +119,6 @@ export default function Home() {
           </span>
         </a>
       </footer> */}
-    </>
+    </div>
   );
 }

@@ -17,7 +17,7 @@ const SKILLS = [
   }),
   new SkillsCategory({
     type: 'JavaScript',
-    skills: ['ES6', 'React', 'Next.js', 'GSAP'],
+    skills: ['ES6+', 'React', 'Next.js', 'GSAP'],
   }),
   new SkillsCategory({
     type: 'Tools',
